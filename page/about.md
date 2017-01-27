@@ -1,8 +1,8 @@
 ---
 layout: life
-title: 关于刀刀亮
+title: 关于minus
 duoshuo: true
-date: 2014-10-18
+date: 2017-1-27
 ---
 
 > 
@@ -11,7 +11,7 @@ date: 2014-10-18
 
 * 你或许可以联系到我:
 
-> <i class="fa  fa-user"></i> 邮箱: [daodaoliang@yeah.net](mailto:daodaoliang@yeah.net)
+> <i class="fa  fa-user"></i> 邮箱: [jianhongminus@gmail.com](mailto:jianhongminus@gmail.com)
 
 ******
 
