@@ -1,5 +1,5 @@
 ---
-layout : post
+layout : life
 title: python 的日志logging模块学习
 category : Python学习
 duoshuo: true
