@@ -1,11 +1,87 @@
+@keyframes fadeIn {
+	0% {
+		opacity:0.1;
+	}
+	25% {
+		opacity:0.25;
+	}
+	50% {
+		opacity:0.5;
+	}
+	75% {
+		opacity:0.75;
+	}
+	100% {
+		opacity:1;
+	}
+}
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity:0.1;
+	}
+	25% {
+		opacity:0.25;
+	}
+	50% {
+		opacity:0.5;
+	}
+	75% {
+		opacity:0.75;
+	}
+	100% {
+		opacity:1;
+	}
+}
+@-o-keyframes fadeIn {
+	0% {
+		opacity:0.1;
+	}
+	25% {
+		opacity:0.25;
+	}
+	50% {
+		opacity:0.5;
+	}
+	75% {
+		opacity:0.75;
+	}
+	100% {
+		opacity:1;
+	}
+}
+@-moz-keyframes fadeIn {
+	0% {
+		opacity:0.1;
+	}
+	25% {
+		opacity:0.25;
+	}
+	50% {
+		opacity:0.5;
+	}
+	75% {
+		opacity:0.75;
+	}
+	100% {
+		opacity:1;
+	}
+}
+::selection {
+	background:#F0F7FA;
+}
+::-moz-selection {
+	background:#F0F7FA;
+}
+
 body {
-  font-family: Helvetica, arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.6;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: white;
-  padding: 30px; }
+	font-family: "Microsoft YaHei",SimHei,"Ubuntu Mono",Ubuntu,"Ubuntu Light",Arial,"STHeiti",Corbel,sans-serif;
+	font-size: 17px;
+	margin-top:30px;
+	letter-spacing:2px;
+	border-radius:3px;
+	color: #333;
+	background: url(../img/body_bg.jpg) repeat top left;
+}
 
 body > *:first-child {
   margin-top: 0 !important; }
