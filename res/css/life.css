@@ -267,7 +267,7 @@ span.float-right {
     margin: 13px auto 0;
     text-align: right; }
 
-code, tt {
+tt {
   margin: 0 2px;
   padding: 0 5px;
   white-space: nowrap;
@@ -275,12 +275,37 @@ code, tt {
   background-color: #f8f8f8;
   border-radius: 3px; }
 
+code {
+	font-family:Monaco,Consolas,Menlo,"Andale Mono","Courier New","Ubuntu Mono",Arial,"Microsoft YaHei","Hiragino Sans GB",sans-serif;
+	background:#f7fafb;
+	color:#7f8c8d;
+	margin:0 2px;
+	padding:0 5px;
+	border-radius:4px;
+	word-break:initial;
+}
+
 pre code {
-  margin: 0;
-  padding: 0;
-  white-space: pre;
-  border: none;
-  background: transparent; }
+	font-family:Monaco,Consolas,Menlo,"Andale Mono","Courier New","Ubuntu Mono",Arial,"Microsoft YaHei","Hiragino Sans GB",sans-serif;
+	font-size:16px;
+	background:#f7fafb;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:none;
+	margin-bottom:25px;
+	line-height:1.5;
+	display:block;
+	border-left:7px solid rgba(102,128,153,0.075);
+	padding:5px 0px 5px 10px;
+	overflow-x:auto;
+	word-wrap:normal;
+	white-space:pre;
+	letter-spacing:0.5px;
+	tab-size:4;
+	-moz-tab-size:4;
+	-o-tab-size:4;
+}
 
 .highlight pre {
   background-color: #f8f8f8;
