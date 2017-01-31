@@ -82,6 +82,11 @@ h1 {
 	font-weight:lighter;
 }
 
+sup {
+	padding:0 2px 0 1px;
+	letter-spacing:0;
+}
+
 body {
 	font-family: "Microsoft YaHei",SimHei,"Ubuntu Mono",Ubuntu,"Ubuntu Light",Arial,"STHeiti",Corbel,sans-serif;
 	font-size: 17px;
@@ -194,7 +199,7 @@ h6 {
   color: #777777;
   font-size: 14px; }
 
-p, blockquote, ul, ol, dl, li, table, pre {
+p, blockquote, ul, ol, dl, li, table {
   margin: 15px 0; }
 
 hr {
@@ -415,6 +420,8 @@ pre {
   overflow: auto;
   padding: 6px 10px;
   border-radius: 3px; }
-  pre code, pre tt {
+
+
+code, pre tt {
     background-color: transparent;
     border: none; }
