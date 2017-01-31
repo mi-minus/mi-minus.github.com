@@ -113,7 +113,14 @@ h6 {
 p, blockquote, ul, ol, dl, li, table, pre {
   margin: 15px 0; }
 
-hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+hr {
+	height:4px;
+	padding:0;
+	margin-top:25px;
+	margin-bottom:-10px;
+	background-color:#EBEBEB;
+	border:0 none;
+}
 
 body > h2:first-child {
   margin-top: 0;
