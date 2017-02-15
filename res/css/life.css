@@ -375,7 +375,7 @@ tt {
 
 code {
 	font-family:Monaco,Consolas,Menlo,"Andale Mono","Courier New","Ubuntu Mono",Arial,"Microsoft YaHei","Hiragino Sans GB",sans-serif;
-	background:#f7fafb;
+	background:#BFBFBF;
 	color:#7f8c8d;
 	margin:0 2px;
 	padding:0 5px;
@@ -399,7 +399,7 @@ code, pre tt {
 pre code {
 	font-family:Monaco,Consolas,Menlo,"Andale Mono","Courier New","Ubuntu Mono",Arial,"Microsoft YaHei","Hiragino Sans GB",sans-serif;
 	font-size:16px;
-	background:#f7fafb;
+	background:#bfbfbf;
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
 	border-radius:3px;
@@ -636,7 +636,7 @@ blockquote p {
 }
 code {
 	font-family:Monaco,Consolas,Menlo,"Andale Mono","Courier New","Ubuntu Mono",Arial,"Microsoft YaHei","Hiragino Sans GB",sans-serif;
-	background:#f7fafb;
+	background:#bfbfbf;
 	color:#7f8c8d;
 	margin:0 2px;
 	padding:0 5px;
@@ -646,7 +646,7 @@ code {
 pre code {
 	font-family:Monaco,Consolas,Menlo,"Andale Mono","Courier New","Ubuntu Mono",Arial,"Microsoft YaHei","Hiragino Sans GB",sans-serif;
 	font-size:16px;
-	background:#f7fafb;
+	background:#bfbfbf;
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
 	border-radius:3px;
