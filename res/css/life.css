@@ -601,7 +601,7 @@ blockquote p {
 }
 code {
 	font-family:Monaco,Consolas,Menlo,"Andale Mono","Courier New","Ubuntu Mono",Arial,"Microsoft YaHei","Hiragino Sans GB",sans-serif;
-	background:#EEE9E9;
+	background:#F5F5F5;
 	color:#7f8c8d;
 	margin:0 2px;
 	padding:0 5px;
@@ -611,7 +611,7 @@ code {
 pre code {
 	font-family:Monaco,Consolas,Menlo,"Andale Mono","Courier New","Ubuntu Mono",Arial,"Microsoft YaHei","Hiragino Sans GB",sans-serif;
 	font-size:16px;
-	background:#EEE9E9;
+	background:#F5F5F5;
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
 	border-radius:3px;
