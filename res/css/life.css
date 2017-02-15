@@ -373,16 +373,6 @@ tt {
   background-color: #f8f8f8;
   border-radius: 3px; }
 
-code {
-	font-family:Monaco,Consolas,Menlo,"Andale Mono","Courier New","Ubuntu Mono",Arial,"Microsoft YaHei","Hiragino Sans GB",sans-serif;
-	background:#BFBFBF;
-	color:#7f8c8d;
-	margin:0 2px;
-	padding:0 5px;
-	border-radius:4px;
-	word-break:initial;
-}
-
 .highlight pre {
   background-color: #f8f8f8;
   border: 1px solid #cccccc;
@@ -392,31 +382,6 @@ code {
   padding: 6px 10px;
   border-radius: 3px; }
 
-code, pre tt {
-    background-color: transparent;
-    border: none; }
-
-pre code {
-	font-family:Monaco,Consolas,Menlo,"Andale Mono","Courier New","Ubuntu Mono",Arial,"Microsoft YaHei","Hiragino Sans GB",sans-serif;
-	font-size:16px;
-	background:#bfbfbf;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border-radius:3px;
-	border:none;
-	margin-bottom:25px;
-	line-height:1.5;
-	display:block;
-	border-left:7px solid rgba(102,128,153,0.075);
-	padding:5px 0px 5px 10px;
-	overflow-x:auto;
-	word-wrap:normal;
-	white-space:pre;
-	letter-spacing:0.5px;
-	tab-size:4;
-	-moz-tab-size:4;
-	-o-tab-size:4;
-}
 
 @keyframes fadeIn {
 	0% {
@@ -636,7 +601,7 @@ blockquote p {
 }
 code {
 	font-family:Monaco,Consolas,Menlo,"Andale Mono","Courier New","Ubuntu Mono",Arial,"Microsoft YaHei","Hiragino Sans GB",sans-serif;
-	background:#bfbfbf;
+	background:#EEE9E9;
 	color:#7f8c8d;
 	margin:0 2px;
 	padding:0 5px;
@@ -646,7 +611,7 @@ code {
 pre code {
 	font-family:Monaco,Consolas,Menlo,"Andale Mono","Courier New","Ubuntu Mono",Arial,"Microsoft YaHei","Hiragino Sans GB",sans-serif;
 	font-size:16px;
-	background:#bfbfbf;
+	background:#EEE9E9;
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
 	border-radius:3px;
