@@ -68,9 +68,11 @@
 }
 ::selection {
 	background:#C6E2FF;
+	color:#98FB98;
 }
 ::-moz-selection {
 	background:#C6E2FF;
+	color:#98FB98;
 }
 h1,h2,h3,h4,h5,h6 {
 	font-family:"Microsoft YaHei",SimHei,"Ubuntu Mono",Ubuntu,"Ubuntu Light",Arial,"STHeiti",Corbel,sans-serif;
