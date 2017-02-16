@@ -109,7 +109,7 @@ body > *:last-child {
 	letter-spacing:1px;
 	line-height:1.6;
 	width:65%;
-	background-color:rgba(242,242,242,200);
+	background-color:rgba(255,255,255,150);
 	overflow:hidden;
 	padding:20px;
 	padding-top:30px;
@@ -610,7 +610,7 @@ pre code {
 	margin-bottom:25px;
 	line-height:1.5;
 	display:block;
-	border-left:7px solid rgba(102,128,153,0.075);
+	border-left:7px solid rgba(19,95,106,0.075);
 	padding:5px 0px 5px 10px;
 	overflow-x:auto;
 	word-wrap:normal;
