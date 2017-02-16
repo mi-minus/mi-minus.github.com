@@ -204,15 +204,6 @@ h6 {
 p, blockquote, ul, ol, dl, li, table {
   margin: 15px 0; }
 
-hr {
-	height:4px;
-	padding:0;
-	margin-top:25px;
-	margin-bottom:-10px;
-	background-color:#EBEBEB;
-	border:0 none;
-}
-
 body > h2:first-child {
   margin-top: 0;
   padding-top: 0; }
@@ -538,7 +529,7 @@ hr {
 	padding:0;
 	margin-top:25px;
 	margin-bottom:-10px;
-	background-color:#EBEBEB;
+	background-color:#ffffff;
 	border:0 none;
 }
 sup {
