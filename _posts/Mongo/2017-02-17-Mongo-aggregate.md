@@ -29,7 +29,7 @@ date: 2017-02-17
     ])
     ```
 
-#### New Aggregation Control Flow Expression 
+#### <font color="#8FBC8F">New Aggregation Control Flow Expression</font>
 
 * $switch : Evaluates, in sequential order, the case expressions of the specified branches to enter the first branch for which the case expression evaluates to true.
     ```sh
@@ -43,7 +43,7 @@ date: 2017-02-17
     }
     ```
 
-#### New Date Aggregation Operators
+#### <font color="#8FBC8F">New Date Aggregation Operators</font>
 
 * $isoDayOfWeek : Returns the ISO 8601 weekday number, ranging from 1 (for Monday) to 7 (for Sunday).
     ```sh
@@ -60,7 +60,7 @@ date: 2017-02-17
     { $isoWeekYear: <date expression> }
     ```
 
-#### New Monitoring Aggregation Sources (监控性质)
+#### <font color="#8FBC8F">New Monitoring Aggregation Sources (监控性质)</font>
 
 * $collStats : Returns statistics regarding a collection or view.
    ```sh
@@ -73,14 +73,14 @@ date: 2017-02-17
     }
     ```
     
-#### New Type Operator
+#### <font color="#8FBC8F">New Type Operator</font>
 
 * $type : Returns a string which specifies the BSON Types of the argument.
    ```sh
    { $type: <expression> }
    ```
 
-#### New $Group operations
+#### <font color="#8FBC8F">New $Group operations</font>
 
 * $stdDevSamp : Calculates standard deviation
     ```sh
@@ -92,7 +92,7 @@ date: 2017-02-17
     { $stdDevPop: <array> }
     ```
 
-#### New $Aggregation operations [https://docs.mongodb.com/manual/release-notes/3.2/#rel-notes-rs-enhancements]
+#### <font color="#8FBC8F">New $Aggregation operations</font> [https://docs.mongodb.com/manual/release-notes/3.2/#rel-notes-rs-enhancements]
 
 * $sqrt : Calculates the square root.
     ```sh
@@ -148,8 +148,7 @@ date: 2017-02-17
 
 * $ifNull 
 
-#### New Aggregation Array Operators
-
+#### <font color="#8FBC8F">New Aggregation Array Operators</font>
 * $slice : Returns a subset of an array.
     ```sh
     { $slice: [ <array>, <n> ] }
@@ -227,7 +226,7 @@ date: 2017-02-17
     }
     ```
  
-#### New Aggregation String Operators
+#### <font color="#8FBC8F">New Aggregation String Operators</font>
 
 * $indexOfBytes : Searches a string for an occurence of a substring and returns the UTF-8 byte index (zero-based) of the first occurence.
   ```sh
@@ -264,8 +263,7 @@ date: 2017-02-17
     { $substrCP: [ <string expression>, <code point index>, <code point count> ] }
     ```
  
-#### Available in $project
-
+#### <font color="#8FBC8F">Available in $project</font>
 * $avg
 
 * $min
