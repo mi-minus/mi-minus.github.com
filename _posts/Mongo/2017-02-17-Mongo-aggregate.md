@@ -94,85 +94,85 @@ date: 2017-02-17
 
 #### <font color="#8FBC8F">New $Aggregation operations</font> [https://docs.mongodb.com/manual/release-notes/3.2/#rel-notes-rs-enhancements]
 
-* <font color="#8FBC8F">$sqrt</font> : Calculates the square root.
+* <font color="#7EC0EE">$sqrt</font> : Calculates the square root.
     ```sh
     { $sqrt: <number> }
     ```
     
-* <font color="#8FBC8F">$abs</font> : Returns the absolute value of a number.
+* <font color="#7EC0EE">$abs</font> : Returns the absolute value of a number.
     ```sh
     { $abs: <number> }
     ```
     
-* <font color="#8FBC8F">$log</font> : Calculates the log of a number in the specified base
+* <font color="#7EC0EE">$log</font> : Calculates the log of a number in the specified base
     ```sh
     { $log: [ <number>, <base> ] }
     ```
     
-* <font color="#8FBC8F">$log10</font> : Calculates the log base 10 of a number.
+* <font color="#7EC0EE">$log10</font> : Calculates the log base 10 of a number.
     ```sh
     { $log10: <number> }
     ```
     
-* <font color="#8FBC8F">$ln</font> : Calculates the natural log of a number.
+* <font color="#7EC0EE">$ln</font> : Calculates the natural log of a number.
     ```sh
     { $ln: <number> }
     ```
 
-* <font color="#8FBC8F">$pow</font> : Raises a number to the specified exponent.
+* <font color="#7EC0EE">$pow</font> : Raises a number to the specified exponent.
     ```sh
     { $pow: [ <number>, <exponent> ] }
     ```
     
-* <font color="#8FBC8F">$exp</font> : Raises e to the specified exponent.
+* <font color="#7EC0EE">$exp</font> : Raises e to the specified exponent.
    ```sh
    { exp: <number> }
    ```
    
-* <font color="#8FBC8F">$trunc</font> : Truncates a number to its integer.
+* <font color="#7EC0EE">$trunc</font> : Truncates a number to its integer.
     ```sh
     { $trunc: <number> }
     ```
     
-* <font color="#8FBC8F">$ceil</font> : Returns the smallest integer greater than or equal to the specified number
+* <font color="#7EC0EE">$ceil</font> : Returns the smallest integer greater than or equal to the specified number
     ```sh
     { $ceil: <number> }
     ```
     
-* <font color="#8FBC8F">$floor</font> : Returns the largest integer less than or equal to the specified number
+* <font color="#7EC0EE">$floor</font> : Returns the largest integer less than or equal to the specified number
     ```sh
     { floor: <number> }
     ```
 
-* <font color="#8FBC8F">$avg</font> : 对数组内元素求平均值
+* <font color="#7EC0EE">$avg</font> : 对数组内元素求平均值
 
-* <font color="#8FBC8F">$ifNull</font>
+* <font color="#7EC0EE">$ifNull</font>
 
 #### <font color="#8FBC8F">New Aggregation Array Operators</font>
-* <font color="#8FBC8F">$slice</font> : Returns a subset of an array.
+* <font color="#7EC0EE">$slice</font> : Returns a subset of an array.
     ```sh
     { $slice: [ <array>, <n> ] }
     { $slice: [ <array>, <position>, <n> ] }
     ```
     
-* <font color="#8FBC8F">$arrayElemAt</font> : Returns the element at the specified array index.
+* <font color="#7EC0EE">$arrayElemAt</font> : Returns the element at the specified array index.
     ```sh
     { $arrayElemAt: [ <array>, <idx> ] }
     ```
     
-* <font color="#8FBC8F">$concatArrays</font> : Concatenates arrays.
+* <font color="#7EC0EE">$concatArrays</font> : Concatenates arrays.
     ```sh
     {
        $concatArrays: [ <array1>, <array2>, ... ]
     }
     ```
     
-* <font color="#8FBC8F">$isArray</font> : Determines if the operand is an array.
+* <font color="#7EC0EE">$isArray</font> : Determines if the operand is an array.
     ```sh
     { $isArray: [ <expression> ] }
     ```
     
-* <font color="#8FBC8F">$filter</font> : Selects a subset of the array based on the condition
+* <font color="#7EC0EE">$filter</font> : Selects a subset of the array based on the condition
     ```sh
     {
        $filter:
@@ -184,27 +184,27 @@ date: 2017-02-17
     }
     ```
     
-* <font color="#8FBC8F">$in</font> : Returns a boolean that indicates if a specified value is in an array.
+* <font color="#7EC0EE">$in</font> : Returns a boolean that indicates if a specified value is in an array.
     ```sh
     { $in: [ <expression>, <array expression> ] }
     ```
     
-* <font color="#8FBC8F">$indexOfArray</font> : Searches an array for an occurence of a specified value and returns the array index (zero-based) of the first occurence.
+* <font color="#7EC0EE">$indexOfArray</font> : Searches an array for an occurence of a specified value and returns the array index (zero-based) of the first occurence.
     ```sh
     { $indexOfArray: [ <array expression>, <search expression>, <start>, <end> ] }
     ```
     
-* <font color="#8FBC8F">$range</font> : Returns an array whose elements are a generated sequence of numbers.
+* <font color="#7EC0EE">$range</font> : Returns an array whose elements are a generated sequence of numbers.
     ```sh
     { $range: [ <start>, <end>, <non-zero step> ] }
     ```
  
- * <font color="#8FBC8F">$reverseArray</font> : Returns an output array whose elements are those of the input array but in reverse order.
+ * <font color="#7EC0EE">$reverseArray</font> : Returns an output array whose elements are those of the input array but in reverse order.
      ```sh
      { $reverseArray: <array expression> }
      ```
  
- * <font color="#8FBC8F">$reduce</font> : Takes an array as input and applies an expression to each element in the array to return the final result of the expression.
+ * <font color="#7EC0EE">$reduce</font> : Takes an array as input and applies an expression to each element in the array to return the final result of the expression.
      ```sh
      {
         $reduce: {
@@ -215,7 +215,7 @@ date: 2017-02-17
      }
      ```
  
- * <font color="#8FBC8F">$zip</font> : Returns an output array where each element is itself an array, consisting of elements in the corresponding array index position from the input arrays.
+ * <font color="#7EC0EE">$zip</font> : Returns an output array where each element is itself an array, consisting of elements in the corresponding array index position from the input arrays.
     ```sh
     {
        $zip: {
@@ -228,50 +228,50 @@ date: 2017-02-17
  
 #### <font color="#8FBC8F">New Aggregation String Operators</font>
 
-* <font color="#8FBC8F">$indexOfBytes</font> : Searches a string for an occurence of a substring and returns the UTF-8 byte index (zero-based) of the first occurence.
+* <font color="#7EC0EE">$indexOfBytes</font> : Searches a string for an occurence of a substring and returns the UTF-8 byte index (zero-based) of the first occurence.
   ```sh
   { $indexOfBytes: [ <string expression>, <substring expression>, <start>, <end> ] }
   ```
 
-* <font color="#8FBC8F">$indexOfCP</font> : Searches a string for an occurence of a substring and returns the UTF-8 code point index (zero-based) of the first occurence.
+* <font color="#7EC0EE">$indexOfCP</font> : Searches a string for an occurence of a substring and returns the UTF-8 code point index (zero-based) of the first occurence.
     ```sh
     { $indexOfCP: [ <string expression>, <substring expression>, <start>, <end> ] }
     ```
     
-* <font color="#8FBC8F">$split</font> : Splits a string by a specified delimiter into string components and returns an array of the string components.
+* <font color="#7EC0EE">$split</font> : Splits a string by a specified delimiter into string components and returns an array of the string components.
     ```sh
     { $split: [ <string expression>, <delimiter> ] }
     ```
  
- * <font color="#8FBC8F">$strLenBytes</font> : Returns the number of UTF-8 bytes for a string.
+ * <font color="#7EC0EE">$strLenBytes</font> : Returns the number of UTF-8 bytes for a string.
      ```sh
      { $strLenBytes: <string expression> }
      ```
      
-* <font color="#8FBC8F">$strLenCP</font> : Returns the number of UTF-8 code points for a string.
+* <font color="#7EC0EE">$strLenCP</font> : Returns the number of UTF-8 code points for a string.
     ```sh
     { $strLenCP: <string expression> }
     ```
  
- * <font color="#8FBC8F">$substrBytes</font> : Returns the substring of a string. The substring starts with the character at the specified UTF-8 byte index (zero-based) in the string for the length specified.
+ * <font color="#7EC0EE">$substrBytes</font> : Returns the substring of a string. The substring starts with the character at the specified UTF-8 byte index (zero-based) in the string for the length specified.
      ```sh
      { $substrBytes: [ <string expression>, <byte index>, <byte count> ] }
      ```
      
-* <font color="#8FBC8F">$substrCP</font> : Returns the substring of a string. The substring starts with the character at the specified UTF-8 code point index (zero-based) in the string for the length specified.
+* <font color="#7EC0EE">$substrCP</font> : Returns the substring of a string. The substring starts with the character at the specified UTF-8 code point index (zero-based) in the string for the length specified.
     ```sh
     { $substrCP: [ <string expression>, <code point index>, <code point count> ] }
     ```
  
 #### <font color="#8FBC8F">Available in $project</font>
-* <font color="#8FBC8F">$avg</font>
+* <font color="#7EC0EE">$avg</font>
 
-* <font color="#8FBC8F">$min</font>
+* <font color="#7EC0EE">$min</font>
 
-* <font color="#8FBC8F">$max</font>
+* <font color="#7EC0EE">$max</font>
 
-* <font color="#8FBC8F">$sum</font>
+* <font color="#7EC0EE">$sum</font>
 
-* <font color="#8FBC8F">$stdDevPop</font>
+* <font color="#7EC0EE">$stdDevPop</font>
 
-* <font color="#8FBC8F">$stdDevSamp</font>
+* <font color="#7EC0EE">$stdDevSamp</font>
