@@ -48,6 +48,35 @@ date: 2017-02-17
 	)
     ```
 
+#### <font color="#1C86EE">($graphLookup - new aggregate stage)[https://docs.mongodb.com/manual/reference/operator/aggregation/graphLookup/]</font>
+* <font color="#7EC0EE">$graphLookup</font> : Performs a recursive search on a collection, with options for restricting the search by recursion depth and query filter
+    ```
+    {
+     $graphLookup: {
+        from: <collection>,
+        startWith: <expression>,
+        connectFromField: <string>,
+        connectToField: <string>,
+        as: <string>,
+        maxDepth: <number>,
+        depthField: <string>,
+        restrictSearchWithMatch: <document>
+      }
+    }
+    ```
+    
+
+* $graphLookup注意事项
+    1. The collection specified in from cannot be sharded.
+    2. Setting the maxDepth field to 0 is equivalent to a non-recursive $lookup search stage.
+    3. $graphLookup cannot use disk space as memory the way other aggregation operations can
+
+* <font color="#7EC0EE">$sortByCount</font> : The operation returns the following documents, sorted in descending order by count
+    ```
+    { $sortByCount:  <expression> }
+    db.exhibits.aggregate( [ { $unwind: "$tags" },  { $sortByCount: "$tags" } ] )
+    ```
+
 #### <font color="#1C86EE">New Aggregation Control Flow Expression</font>
 
 * <font color="#7EC0EE">$switch</font> : Evaluates, in sequential order, the case expressions of the specified branches to enter the first branch for which the case expression evaluates to true.
