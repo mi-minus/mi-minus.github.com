@@ -29,6 +29,25 @@ date: 2017-02-17
     ])
     ```
 
+#### #### <font color="#8FBC8F">new aggregate count</font>
+* <font color="#7EC0EE">$count</font> : Returns a document that contains a count of the number of documents input to the stage.
+    ```sh
+	db.scores.aggregate(
+	  [
+	    {
+	      $match: {
+		score: {
+		  $gt: 80
+		}
+	      }
+	    },
+	    {
+	      $count: "passing_scores"
+	    }
+	  ]
+	)
+    ```
+
 #### <font color="#8FBC8F">New Aggregation Control Flow Expression</font>
 
 * <font color="#7EC0EE">$switch</font> : Evaluates, in sequential order, the case expressions of the specified branches to enter the first branch for which the case expression evaluates to true.
