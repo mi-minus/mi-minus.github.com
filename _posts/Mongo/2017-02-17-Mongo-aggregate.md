@@ -17,7 +17,7 @@ date: 2017-02-17
 
 ### Mongo Aggregate
 
-#### new aggregate.project change
+#### <font color=#8FBC8F>new aggregate.project change</font>
 * adds support for field exclusion in the output document ( only exclude the _id field in the stage before)
     ```sh
     db.Tweets.aggregate([
