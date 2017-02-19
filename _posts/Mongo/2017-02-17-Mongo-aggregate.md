@@ -17,7 +17,7 @@ date: 2017-02-17
 
 ### Mongo Aggregate
 
-#### <font color="#8FBC8F">new aggregate.project change</font>
+#### <font color="#1C86EE">new aggregate.project change</font>
 * adds support for field exclusion in the output document ( only exclude the _id field in the stage before)
     ```sh
     db.Tweets.aggregate([
@@ -29,7 +29,7 @@ date: 2017-02-17
     ])
     ```
 
-#### #### <font color="#8FBC8F">new aggregate count</font>
+#### #### <font color="#1C86EE">new aggregate count</font>
 * <font color="#7EC0EE">$count</font> : Returns a document that contains a count of the number of documents input to the stage.
     ```sh
 	db.scores.aggregate(
@@ -48,7 +48,7 @@ date: 2017-02-17
 	)
     ```
 
-#### <font color="#8FBC8F">New Aggregation Control Flow Expression</font>
+#### <font color="#1C86EE">New Aggregation Control Flow Expression</font>
 
 * <font color="#7EC0EE">$switch</font> : Evaluates, in sequential order, the case expressions of the specified branches to enter the first branch for which the case expression evaluates to true.
     ```sh
@@ -62,7 +62,7 @@ date: 2017-02-17
     }
     ```
 
-#### <font color="#8FBC8F">New Date Aggregation Operators</font>
+#### <font color="#1C86EE">New Date Aggregation Operators</font>
 
 * <font color="#7EC0EE">$isoDayOfWeek</font> : Returns the ISO 8601 weekday number, ranging from 1 (for Monday) to 7 (for Sunday).
     ```sh
@@ -79,7 +79,7 @@ date: 2017-02-17
     { $isoWeekYear: <date expression> }
     ```
 
-#### <font color="#8FBC8F">New Monitoring Aggregation Sources (监控性质)</font>
+#### <font color="#1C86EE">New Monitoring Aggregation Sources (监控性质)</font>
 
 * <font color="#7EC0EE">$collStats</font> : Returns statistics regarding a collection or view.
    ```sh
@@ -92,14 +92,14 @@ date: 2017-02-17
     }
     ```
     
-#### <font color="#8FBC8F">New Type Operator</font>
+#### <font color="#1C86EE">New Type Operator</font>
 
 * <font color="#7EC0EE">$type</font> : Returns a string which specifies the BSON Types of the argument.
    ```sh
    { $type: <expression> }
    ```
 
-#### <font color="#8FBC8F">New $Group operations</font>
+#### <font color="#1C86EE">New $Group operations</font>
 
 * <font color="#7EC0EE">$stdDevSamp</font> : Calculates standard deviation
     ```sh
@@ -111,7 +111,7 @@ date: 2017-02-17
     { $stdDevPop: <array> }
     ```
 
-#### <font color="#8FBC8F">New $Aggregation operations</font> [https://docs.mongodb.com/manual/release-notes/3.2/#rel-notes-rs-enhancements]
+#### <font color="#1C86EE">New $Aggregation operations</font> [https://docs.mongodb.com/manual/release-notes/3.2/#rel-notes-rs-enhancements]
 
 * <font color="#7EC0EE">$sqrt</font> : Calculates the square root.
     ```sh
@@ -167,7 +167,7 @@ date: 2017-02-17
 
 * <font color="#7EC0EE">$ifNull</font>
 
-#### <font color="#8FBC8F">New Aggregation Array Operators</font>
+#### <font color="#1C86EE">New Aggregation Array Operators</font>
 * <font color="#7EC0EE">$slice</font> : Returns a subset of an array.
     ```sh
     { $slice: [ <array>, <n> ] }
@@ -245,7 +245,7 @@ date: 2017-02-17
     }
     ```
  
-#### <font color="#8FBC8F">New Aggregation String Operators</font>
+#### <font color="#1C86EE">New Aggregation String Operators</font>
 
 * <font color="#7EC0EE">$indexOfBytes</font> : Searches a string for an occurence of a substring and returns the UTF-8 byte index (zero-based) of the first occurence.
   ```sh
@@ -282,7 +282,7 @@ date: 2017-02-17
     { $substrCP: [ <string expression>, <code point index>, <code point count> ] }
     ```
  
-#### <font color="#8FBC8F">Available in $project</font>
+#### <font color="#1C86EE">Available in $project</font>
 * <font color="#7EC0EE">$avg</font>
 
 * <font color="#7EC0EE">$min</font>
