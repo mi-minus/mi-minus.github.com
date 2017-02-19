@@ -17,10 +17,22 @@ date: 2017-02-17
 
 ### Mongo Aggregate
 
+#### new aggregate.project change
+* adds support for field exclusion in the output document ( only exclude the _id field in the stage before)
+    ```sh
+    db.Tweets.aggregate([
+    {
+        '$project':{
+                'Like':0   // (之前这个不可以，只有_id:0，　现在可以了)
+            }
+        }
+    ])
+    ```
+
 #### New Aggregation Control Flow Expression 
 
 * $switch : Evaluates, in sequential order, the case expressions of the specified branches to enter the first branch for which the case expression evaluates to true.
-    ```
+    ```sh
     $switch: {
        branches: [
          { case: <expression>, then: <expression> },
@@ -182,7 +194,7 @@ date: 2017-02-17
     ```
     { $indexOfArray: [ <array expression>, <search expression>, <start>, <end> ] }
     ```
-  
+    
 * $range : Returns an array whose elements are a generated sequence of numbers.
     ```
     { $range: [ <start>, <end>, <non-zero step> ] }
