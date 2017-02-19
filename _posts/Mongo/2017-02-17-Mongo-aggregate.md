@@ -31,7 +31,7 @@ date: 2017-02-17
 
 #### <font color="#8FBC8F">New Aggregation Control Flow Expression</font>
 
-* $switch : Evaluates, in sequential order, the case expressions of the specified branches to enter the first branch for which the case expression evaluates to true.
+* <font color="#7EC0EE">$switch</font> : Evaluates, in sequential order, the case expressions of the specified branches to enter the first branch for which the case expression evaluates to true.
     ```sh
     $switch: {
        branches: [
@@ -45,24 +45,24 @@ date: 2017-02-17
 
 #### <font color="#8FBC8F">New Date Aggregation Operators</font>
 
-* $isoDayOfWeek : Returns the ISO 8601 weekday number, ranging from 1 (for Monday) to 7 (for Sunday).
+* <font color="#7EC0EE">$isoDayOfWeek</font> : Returns the ISO 8601 weekday number, ranging from 1 (for Monday) to 7 (for Sunday).
     ```sh
     { $isoDayOfWeek: <date expression> }
     ```
     
-* $isoWeek : Returns the ISO 8601 week number, which can range from 1 to 53. Week numbers start at 1 with the week (Monday through Sunday) that contains the year’s first Thursday.
+* <font color="#7EC0EE">$isoWeek</font> : Returns the ISO 8601 week number, which can range from 1 to 53. Week numbers start at 1 with the week (Monday through Sunday) that contains the year’s first Thursday.
     ```sh
     { $isoWeek: <date expression> }
     ```
     
-* $isoWeekYear : Returns the ISO 8601 year number, where the year starts with the Monday of week 1 (ISO 8601) and ends with the Sundays of the last week (ISO 8601).
+* <font color="#7EC0EE">$isoWeekYear</font> : Returns the ISO 8601 year number, where the year starts with the Monday of week 1 (ISO 8601) and ends with the Sundays of the last week (ISO 8601).
     ```sh
     { $isoWeekYear: <date expression> }
     ```
 
 #### <font color="#8FBC8F">New Monitoring Aggregation Sources (监控性质)</font>
 
-* $collStats : Returns statistics regarding a collection or view.
+* <font color="#7EC0EE">$collStats</font> : Returns statistics regarding a collection or view.
    ```sh
     {
        $collStats:
@@ -75,19 +75,19 @@ date: 2017-02-17
     
 #### <font color="#8FBC8F">New Type Operator</font>
 
-* $type : Returns a string which specifies the BSON Types of the argument.
+* <font color="#7EC0EE">$type</font> : Returns a string which specifies the BSON Types of the argument.
    ```sh
    { $type: <expression> }
    ```
 
 #### <font color="#8FBC8F">New $Group operations</font>
 
-* $stdDevSamp : Calculates standard deviation
+* <font color="#7EC0EE">$stdDevSamp</font> : Calculates standard deviation
     ```sh
     { $stdDevSamp: <array> }
     ```
     
-* $stdDevPop : Calculates population standard deviation
+* <font color="#7EC0EE">$stdDevPop</font> : Calculates population standard deviation
     ```sh
     { $stdDevPop: <array> }
     ```
