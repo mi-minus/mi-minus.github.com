@@ -48,7 +48,7 @@ date: 2017-02-17
 	)
     ```
 
-#### <font color="#1C86EE">($graphLookup - new aggregate stage)[https://docs.mongodb.com/manual/reference/operator/aggregation/graphLookup/]</font>
+#### <font color="#1C86EE">[$graphLookup - new aggregate stage](https://docs.mongodb.com/manual/reference/operator/aggregation/graphLookup/)</font>
 * <font color="#7EC0EE">$graphLookup</font> : Performs a recursive search on a collection, with options for restricting the search by recursion depth and query filter
     ```
     {
