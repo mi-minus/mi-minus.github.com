@@ -23,6 +23,7 @@ date: 2017-02-17
     ```
     { $stdDevSamp: <array> }
     ```
+    
 * $stdDevPop : Calculates population standard deviation
     ```
     { $stdDevPop: <array> }
@@ -120,8 +121,13 @@ date: 2017-02-17
 #### Available in $project
 
 * $avg
+
 * $min
+
 * $max
+
 * $sum
+
 * $stdDevPop
+
 * $stdDevSamp
