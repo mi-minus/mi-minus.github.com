@@ -29,7 +29,7 @@ date: 2017-02-17
     ])
     ```
 
-#### #### <font color="#1C86EE">new aggregate count</font>
+#### <font color="#1C86EE">new aggregate count</font>
 * <font color="#7EC0EE">$count</font> : Returns a document that contains a count of the number of documents input to the stage.
     ```sh
 	db.scores.aggregate(
