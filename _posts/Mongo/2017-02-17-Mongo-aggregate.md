@@ -17,6 +17,57 @@ date: 2017-02-17
 
 ### Mongo Aggregate
 
+#### New Aggregation Control Flow Expression 
+
+* $switch : Evaluates, in sequential order, the case expressions of the specified branches to enter the first branch for which the case expression evaluates to true.
+    ```
+    $switch: {
+       branches: [
+         { case: <expression>, then: <expression> },
+         { case: <expression>, then: <expression> },
+         ...
+      ],
+      default: <expression>
+    }
+    ```
+
+#### New Date Aggregation Operators
+
+* $isoDayOfWeek : Returns the ISO 8601 weekday number, ranging from 1 (for Monday) to 7 (for Sunday).
+    ```
+    { $isoDayOfWeek: <date expression> }
+    ```
+    
+* $isoWeek : Returns the ISO 8601 week number, which can range from 1 to 53. Week numbers start at 1 with the week (Monday through Sunday) that contains the year’s first Thursday.
+    ```
+    { $isoWeek: <date expression> }
+    ```
+    
+* $isoWeekYear : Returns the ISO 8601 year number, where the year starts with the Monday of week 1 (ISO 8601) and ends with the Sundays of the last week (ISO 8601).
+    ```
+    { $isoWeekYear: <date expression> }
+    ```
+
+#### New Monitoring Aggregation Sources (监控性质)
+
+* $collStats : Returns statistics regarding a collection or view.
+   ```
+    {
+       $collStats:
+       {
+          latencyStats: { histograms: <boolean> },
+          storageStats: {}
+       }
+    }
+    ```
+    
+#### New Type Operator
+
+* $type : Returns a string which specifies the BSON Types of the argument.
+   ```
+   { $type: <expression> }
+   ```
+
 #### New $Group operations
 
 * $stdDevSamp : Calculates standard deviation
@@ -81,6 +132,10 @@ date: 2017-02-17
     { floor: <number> }
     ```
 
+* $avg : 对数组内元素求平均值
+
+* $ifNull 
+
 #### New Aggregation Array Operators
 
 * $slice : Returns a subset of an array.
@@ -118,6 +173,86 @@ date: 2017-02-17
     }
     ```
     
+* $in : Returns a boolean that indicates if a specified value is in an array.
+    ```
+    { $in: [ <expression>, <array expression> ] }
+    ```
+    
+* $indexOfArray : Searches an array for an occurence of a specified value and returns the array index (zero-based) of the first occurence.
+    ```
+    { $indexOfArray: [ <array expression>, <search expression>, <start>, <end> ] }
+    ```
+  
+* $range : Returns an array whose elements are a generated sequence of numbers.
+    ```
+    { $range: [ <start>, <end>, <non-zero step> ] }
+    ```
+ 
+ * $reverseArray : Returns an output array whose elements are those of the input array but in reverse order.
+     ```
+     { $reverseArray: <array expression> }
+     ```
+ 
+ * $reduce : Takes an array as input and applies an expression to each element in the array to return the final result of the expression.
+     ```
+     {
+        $reduce: {
+           input: <array>,
+           initialValue: <expression>,
+           in: <expression>
+        }
+     }
+     ```
+ 
+ * $zip : Returns an output array where each element is itself an array, consisting of elements in the corresponding array index position from the input arrays.
+    ```
+    {
+       $zip: {
+          inputs: [ <array expression1>,  ... ],
+          useLongestLength: <boolean>,
+          defaults:  <array expression>
+        }
+    }
+    ```
+ 
+#### New Aggregation String Operators
+
+* $indexOfBytes : Searches a string for an occurence of a substring and returns the UTF-8 byte index (zero-based) of the first occurence.
+
+  ```
+  { $indexOfBytes: [ <string expression>, <substring expression>, <start>, <end> ] }
+  ```
+
+* $indexOfCP : Searches a string for an occurence of a substring and returns the UTF-8 code point index (zero-based) of the first occurence.
+    ```
+    { $indexOfCP: [ <string expression>, <substring expression>, <start>, <end> ] }
+    ```
+    
+* $split : Splits a string by a specified delimiter into string components and returns an array of the string components.
+    ```
+    { $split: [ <string expression>, <delimiter> ] }
+    ```
+ 
+ * $strLenBytes : Returns the number of UTF-8 bytes for a string.
+     ```
+     { $strLenBytes: <string expression> }
+     ```
+     
+* $strLenCP : Returns the number of UTF-8 code points for a string.
+    ```
+    { $strLenCP: <string expression> }
+    ```
+ 
+ * $substrBytes : Returns the substring of a string. The substring starts with the character at the specified UTF-8 byte index (zero-based) in the string for the length specified.
+     ```
+     { $substrBytes: [ <string expression>, <byte index>, <byte count> ] }
+     ```
+     
+* $substrCP : Returns the substring of a string. The substring starts with the character at the specified UTF-8 code point index (zero-based) in the string for the length specified.
+    ```
+    { $substrCP: [ <string expression>, <code point index>, <code point count> ] }
+    ```
+ 
 #### Available in $project
 
 * $avg
