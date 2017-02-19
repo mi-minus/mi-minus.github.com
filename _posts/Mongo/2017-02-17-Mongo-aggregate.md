@@ -50,7 +50,7 @@ date: 2017-02-17
 
 #### <font color="#1C86EE">[$graphLookup - new aggregate stage](https://docs.mongodb.com/manual/reference/operator/aggregation/graphLookup/)</font>
 * <font color="#7EC0EE">$graphLookup</font> : Performs a recursive search on a collection, with options for restricting the search by recursion depth and query filter
-    ```
+    ```sh
     {
      $graphLookup: {
         from: <collection>,
@@ -72,7 +72,7 @@ date: 2017-02-17
     3. $graphLookup cannot use disk space as memory the way other aggregation operations can
 
 * <font color="#7EC0EE">$sortByCount</font> : The operation returns the following documents, sorted in descending order by count
-    ```
+    ```sh
     { $sortByCount:  <expression> }
     db.exhibits.aggregate( [ { $unwind: "$tags" },  { $sortByCount: "$tags" } ] )
     ```
