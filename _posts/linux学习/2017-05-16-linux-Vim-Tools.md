@@ -22,10 +22,11 @@ date: 2017-05-16
 sudo apt-get install terminator 
 ```
 2. 快捷键
+
 | 快捷键                      | 作用               | 
 | -------------              |:-------------:    |
 |  ctrl + shift + x        | 小屏切换全屏               |
-|  ctrl + shift + z        | 小屏切换全屏(文字屏幕大小比不变)              |
+|  ctrl + shift + z        | 小屏切换全屏(文字屏幕大小比不变) |
 |  ctrl + shift + e        | 水平分屏                  |
 |  ctrl + shift + o        | 竖直分屏                  |
 |  ctrl + pagedown         | 跳转到下一个tab            |
