@@ -37,19 +37,21 @@ ctrl + shift + 上下左右:  对当前窗口上下左右边移动放大
 alt + a              :   Broadall
 alt + o              :   Broadoff
 ```
-| 快捷键                      | 作用           | 
+| 快捷键                      | 作用               | 
 | -------------              |:-------------:    |
-| 1. ctrl + shift + x        | Y                |
-| 2. ctrl + shift + z        | Y                |
-| 3. ctrl + shift + e        | Y                |
-| 4. ctrl + shift + o        | Y                |
-| 5. ctrl + pagedown         | Y                |
-| 6. ctrl + pageup           | Y                |
-| 7. ctrl + shift + pagedown/pageup   | Y       |
-| 8. f11                     | Y                |
-| 10. ctrl + shift + w       | Y                |
-| 11. alt + 上下左右          | Y                |
-| 12. ctrl + shift + 上下左右 | Y                |
-| 13. ctrl + shift + w       | Y                |
-| 14. alt + a                | Y                |
-| 15. alt + o                | Y                |
+|  ctrl + shift + x        | 小屏切换全屏               |
+|  ctrl + shift + z        | 小屏切换全屏(文字屏幕大小比不变)              |
+|  ctrl + shift + e        | 水平分屏                  |
+|  ctrl + shift + o        | 竖直分屏                  |
+|  ctrl + pagedown         | 跳转到下一个tab            |
+|  ctrl + pageup           | 跳转到上一个tab             |
+|  ctrl + shift + pagedown/pageup   | 移动tab间的顺序    |
+|  f11                     | 完全全屏                   |
+|  ctrl + shift + w        | 关闭当前屏                 |
+|  alt + 上下左右           | tab 之间进行转换            |
+|  ctrl + shift + 上下左右  | 对当前窗口上下左右边移动放大   |
+|  alt + a                 | Broadall on               |
+|  alt + o                 | Broadall off              |
+|  Ctrl+Shift+C            | copy                      |
+|  Ctrl+Shift+V            | paste                     |
+|  alt + o                 | Broadall off              |
