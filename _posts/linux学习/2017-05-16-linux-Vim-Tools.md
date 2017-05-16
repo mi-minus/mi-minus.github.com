@@ -13,6 +13,10 @@ date: 2017-05-16
 
 <!-- more -->
 ### 强大终端工具一：terminator
+0. 简介
+```
+    Terminator 就可以完美地实现了在 Ubuntu在同一窗口中启动多个终端，并且可以自由的在一个窗口中分割区域建立新终端，还可以通过鼠标拉伸调整每个终端的大小
+```
 1. 安装／卸载
 ```sh
 sudo apt-get install terminator 
@@ -33,3 +37,19 @@ ctrl + shift + 上下左右:  对当前窗口上下左右边移动放大
 alt + a              :   Broadall
 alt + o              :   Broadoff
 ```
+| 快捷键                      | 作用           | 
+| -------------              |:-------------:    |
+| 1. ctrl + shift + x        | Y                |
+| 2. ctrl + shift + z        | Y                |
+| 3. ctrl + shift + e        | Y                |
+| 4. ctrl + shift + o        | Y                |
+| 5. ctrl + pagedown         | Y                |
+| 6. ctrl + pageup           | Y                |
+| 7. ctrl + shift + pagedown/pageup   | Y       |
+| 8. f11                     | Y                |
+| 10. ctrl + shift + w       | Y                |
+| 11. alt + 上下左右          | Y                |
+| 12. ctrl + shift + 上下左右 | Y                |
+| 13. ctrl + shift + w       | Y                |
+| 14. alt + a                | Y                |
+| 15. alt + o                | Y                |
