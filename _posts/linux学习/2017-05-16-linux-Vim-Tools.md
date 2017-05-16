@@ -12,7 +12,24 @@ date: 2017-05-16
 
 
 <!-- more -->
-### 强大工具一：terminator
+### 强大终端工具一：terminator
 1. 安装／卸载
 ```sh
+sudo apt-get install terminator 
+```
+2. 快捷键
+```sh
+ctrl + shift + x     :   小屏切换全屏
+ctrl + shift + z     :   小屏切换全屏(文字屏幕大小比不变)
+ctrl + shift + e     :   水平分屏
+ctrl + shift + o     :   竖直分屏
+ctrl + pagedown      :   跳转到下一个tab
+ctrl + pageup        :   跳转到上一个tab
+ctrl + shift + pagedown/pageup   :   移动tab间的顺序
+f11                  :   完全全屏
+ctrl + shift + w     :   关闭当前屏
+alt + 上下左右         :   tab 之间进行转换
+ctrl + shift + 上下左右:  对当前窗口上下左右边移动放大
+alt + a              :   Broadall
+alt + o              :   Broadoff
 ```
