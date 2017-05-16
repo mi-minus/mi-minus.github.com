@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: life
 title: linux Vim Tools介绍
 category: linux学习
 date: 2017-05-16
