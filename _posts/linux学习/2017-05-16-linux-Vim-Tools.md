@@ -111,8 +111,10 @@ sudo apt-get install terminator
   [[default]]
     background_image = None
     font = Monaco Bold 12
-    use_system_font = False
+    use_system_font = False
 ```
+显示效果如下图：
+![terminator](/res/img/blog/linux学习/terminator-screen.png)
 
 ### 强大终端编辑工具：vim
 1. vim配置文件
