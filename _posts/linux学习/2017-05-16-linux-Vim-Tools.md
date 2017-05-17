@@ -116,6 +116,41 @@ sudo apt-get install terminator
 显示效果如下图：
 ![terminator](/res/img/blog/linux学习/terminator-screen.png)
 
+### 强大终端shell工具：[tmux]
+0. 简介
+```
+Tmux(terminal multiplexer) 是一个终端复用器: 可以激活多个终端或窗口, 在每个终端都可以单独访问，每一个终端都可以访问，运行和控制各自的程序.tmux类似于screen，可以关闭窗口将程序放在后台运行，需要的时候再重新连接
+```
+
+1. 安装
+```sh
+sudo apt-get install tmux
+```
+
+2. 基本命令
+
+| 快捷键      | 作用                       | 
+| ---------- |:-------------:             |
+|  tmux      | 启动tmux  　　   |
+|  tmux ls   | 列出会话  　　　 |
+|  tmux attach -t session     | 进入     某个会话  |
+
+3. windows命令
+
+| 快捷键      | 作用                       | 
+| ---------- |:-------------:             |
+|  tmux      | 启动tmux  　　   |
+|  tmux ls   | 列出会话  　　　 |
+|  tmux attach -t session     | 进入     某个会话  |
+
+4. panel命令
+
+| 快捷键      | 作用                       | 
+| ---------- |:-------------:             |
+|  tmux      | 启动tmux  　　   |
+|  tmux ls   | 列出会话  　　　 |
+|  tmux attach -t session     | 进入     某个会话  |
+
 ### 强大终端编辑工具：vim
 1. vim配置文件
 
