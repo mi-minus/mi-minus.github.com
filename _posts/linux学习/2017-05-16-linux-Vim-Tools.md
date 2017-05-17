@@ -48,6 +48,8 @@ sudo apt-get install terminator
 |  Ctrl + tab / ctr+shift+n| 同窗口各小窗口间循环选中       |
 |  Ctr+shift+f             | 窗口中搜索                    |
 |  Ctrl+Shift+G            | 小窗口重设并清空窗口           | 
+|  Ctrl+Shift+I/win+i      | 打开一个新开启的窗口           | 
+|  Win + R                 | 一个tab中移动小窗口位置        | 
 
 
 ### 强大终端编辑工具：vim
