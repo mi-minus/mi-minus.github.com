@@ -51,6 +51,68 @@ sudo apt-get install terminator
 |  Ctrl+Shift+I/win+i      | 打开一个新开启的窗口           | 
 |  Win + R                 | 一个tab中移动小窗口位置        | 
 
+3. ~/.config/terminator/config配置
+```sh
+[global_config]                                                                                                                                                                                                     
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child0]]]
+      position=600
+      order = 0 
+      parent = window0
+      type = VPaned
+
+    [[[child1]]]    
+      position=960
+      order = 0 
+      parent = child0
+      profile = default
+      type = HPaned 
+
+    [[[child2]]]
+      order = 1 
+      parent = child0
+      profile = default
+      type = HPaned
+
+    [[[term1]]]    
+      profile = default
+      order = 0 
+      parent = child1
+      type = Terminal 
+
+    [[[term2]]]    
+      profile = default
+      order = 1 
+      parent = child1
+      type = Terminal 
+
+    [[[term3]]]    
+      profile = default
+      order = 0 
+      parent = child2
+      type = Terminal 
+
+    [[[term4]]]    
+      profile = default
+      order = 1 
+      parent = child2
+      type = Terminal 
+
+    [[[window0]]]
+      order = 0 
+      parent = ""
+      position = 1440:0
+      size = 1920, 1200
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_image = None
+    font = Monaco Bold 12
+    use_system_font = False
+```
 
 ### 强大终端编辑工具：vim
 1. vim配置文件
