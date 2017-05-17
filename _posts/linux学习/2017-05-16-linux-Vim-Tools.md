@@ -245,3 +245,6 @@ sudo apt-get install tmux
 ```sh
 :w !sudo tee %
 ```
+
+5. vim命令示意图
+![vim-命令](/res/img/blog/linux学习/vi-vim-cheat-sheet.gif)
