@@ -13,7 +13,7 @@ date: 2017-05-16
 
 <!-- more -->
 ### 强大终端工具一：[terminator](http://terminator-gtk3.readthedocs.io/en/latest/)
-0. 简介
+0. 简介:[官方使用教程](http://terminator-gtk3.readthedocs.io/en/latest/)
 ```
     Terminator 就可以完美地实现了在 Ubuntu在同一窗口中启动多个终端，并且可以自由的在一个窗口中分割区域建立新终端，还可以通过鼠标拉伸调整每个终端的大小
 ```
