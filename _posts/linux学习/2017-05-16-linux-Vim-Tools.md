@@ -17,10 +17,12 @@ date: 2017-05-16
 ```
     Terminator 就可以完美地实现了在 Ubuntu在同一窗口中启动多个终端，并且可以自由的在一个窗口中分割区域建立新终端，还可以通过鼠标拉伸调整每个终端的大小
 ```
+
 1. 安装／卸载
 ```sh
 sudo apt-get install terminator 
 ```
+
 2. 快捷键
 
 | 快捷键                      | 作用               | 
@@ -241,10 +243,11 @@ sudo apt-get install tmux
 :!command               : 执行shell命令command
 ```
 
-4.vim中需要权限保存
+4. vim中需要权限保存
 ```sh
 :w !sudo tee %
 ```
 
 5. vim命令示意图
+
 ![vim-命令](/res/img/blog/linux学习/vi-vim-cheat-sheet.gif)
