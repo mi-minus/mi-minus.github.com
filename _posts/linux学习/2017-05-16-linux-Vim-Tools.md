@@ -137,19 +137,30 @@ sudo apt-get install tmux
 
 3. windows命令
 
-| 快捷键      | 作用                       | 
-| ---------- |:-------------:             |
-|  tmux      | 启动tmux  　　   |
-|  tmux ls   | 列出会话  　　　 |
-|  tmux attach -t session     | 进入     某个会话  |
+| 快捷键      | 作用                      | 
+| ----------   |:-------------:          |
+|  ctrl-b c      | 新建窗口  　　         |
+|  ctrl-b &      | 关闭窗口  　　　       |
+|  ctrl-b num    | 指定到某个窗口         |
+|  ctrl-b p/n    | 切换到上/下窗口        |
+|  ctrl-b l      | 在两个窗口之间互相切换  |
+|  ctrl-b w      | 通过窗口列表切换窗口    |
+|  ctrl-b f      | 在所有窗口中查找指定文本 |
 
 4. panel命令
 
 | 快捷键      | 作用                       | 
 | ---------- |:-------------:             |
-|  tmux      | 启动tmux  　　   |
-|  tmux ls   | 列出会话  　　　 |
-|  tmux attach -t session     | 进入     某个会话  |
+|  Ctrl-b t      | 很酷的一个时钟  　　   |
+|  ctrl-b x    | 关闭一个panel  　　　 |
+|  ctrl-b "     | 在下边分割出来一个pane  |
+|  Ctrl-b %     | 在右边分割出来一个pane     |
+|  tmux -r     | 连接上次断开的session  |
+|  Ctrl-b o[方向键]     | 在多个panes中切换，下一个  |
+|  ctrl-b q     | 显示各panel编号  |
+|  ctrl-b $     | 给panel指定名字  |
+|  ctrl-b c     | 创建一个新的window  |
+|  ctrl-b num     | 直接跳到你按的数字所在的window  |
 
 ### 强大终端编辑工具：vim
 1. vim配置文件
