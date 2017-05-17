@@ -251,3 +251,4 @@ sudo apt-get install tmux
 5. vim命令示意图
 
 ![vim-命令](/res/img/blog/linux学习/vi-vim-cheat-sheet.gif)
+![python](/res/img/blog/python学习/python-编码规范.png)
