@@ -171,6 +171,7 @@ sudo apt-get install tmux
 |  ctrl-b num     | 直接跳到你按的数字所在的window  |
 
 5. tmux结构示意图
+
 ![tmux](/res/img/blog/linux学习/tmux.jpg)
 
 ### 强大终端编辑工具：vim
