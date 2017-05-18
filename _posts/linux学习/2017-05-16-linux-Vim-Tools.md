@@ -141,12 +141,12 @@ sudo apt-get install tmux
 |  tmux kill-session -t <会话名>  | 杀死一个session  |
 |  tmux rename-session -t <会话名> | 对一个session进行重命名 |
 |  Ctrl-b d      | detached a session    |
+|  ctrl-b $     | 给session指定名字  |
 
 3. windows命令
 
 | 快捷键      | 作用                      | 
 | ----------   |:-------------:          |
-|  ctrl-b c      | 新建窗口  　　         |
 |  ctrl-b c      | 新建窗口  　　         |
 |  ctrl-b &      | 关闭窗口  　　　       |
 |  ctrl-b num    | 指定到某个窗口         |
@@ -166,7 +166,6 @@ sudo apt-get install tmux
 |  tmux -r     | 连接上次断开的session  |
 |  Ctrl-b o[方向键]     | 在多个panes中切换，下一个  |
 |  ctrl-b q     | 显示各panel编号  |
-|  ctrl-b $     | 给panel指定名字  |
 |  ctrl-b c     | 创建一个新的window  |
 |  ctrl-b num     | 直接跳到你按的数字所在的window  |
 
