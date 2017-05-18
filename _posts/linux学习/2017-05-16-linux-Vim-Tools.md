@@ -133,14 +133,20 @@ sudo apt-get install tmux
 
 | 快捷键      | 作用                       | 
 | ---------- |:-------------:             |
-|  tmux      | 启动tmux  　　   |
-|  tmux ls   | 列出会话  　　　 |
-|  tmux attach -t session     | 进入     某个会话  |
+|  tmux      | 启动tmux  　　     |
+|  tmux ls   | 列出会话  　　　   |
+|  tmux new -s session_name     | 开启一个新的session  　　　 |
+|  tmux a    | 进入到第一个可用会话  　　　 |
+|  tmux attach/a -t session     | 进入     某个会话  |
+|  tmux kill-session -t <会话名>  | 杀死一个session  |
+|  tmux rename-session -t <会话名> | 对一个session进行重命名 |
+|  Ctrl-b d      | detached a session    |
 
 3. windows命令
 
 | 快捷键      | 作用                      | 
 | ----------   |:-------------:          |
+|  ctrl-b c      | 新建窗口  　　         |
 |  ctrl-b c      | 新建窗口  　　         |
 |  ctrl-b &      | 关闭窗口  　　　       |
 |  ctrl-b num    | 指定到某个窗口         |
@@ -163,6 +169,9 @@ sudo apt-get install tmux
 |  ctrl-b $     | 给panel指定名字  |
 |  ctrl-b c     | 创建一个新的window  |
 |  ctrl-b num     | 直接跳到你按的数字所在的window  |
+
+5. tmux结构示意图
+![tmux](/res/img/blog/linux学习/tmux.jpg)
 
 ### 强大终端编辑工具：vim
 1. vim配置文件
