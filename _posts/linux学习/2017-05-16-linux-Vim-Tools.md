@@ -118,7 +118,7 @@ sudo apt-get install terminator
 显示效果如下图：
 ![terminator](/res/img/blog/linux学习/terminator-screen.png)
 
-### 强大终端shell工具：[tmux]
+### 强大终端shell工具：[tmux](https://wiki.archlinux.org/index.php/tmux)
 0. 简介
 ```
 Tmux(terminal multiplexer) 是一个终端复用器: 可以激活多个终端或窗口, 在每个终端都可以单独访问，每一个终端都可以访问，运行和控制各自的程序.tmux类似于screen，可以关闭窗口将程序放在后台运行，需要的时候再重新连接
