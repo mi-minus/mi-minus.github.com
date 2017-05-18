@@ -166,7 +166,6 @@ sudo apt-get install tmux
 |  tmux -r     | 连接上次断开的session  |
 |  Ctrl-b o[方向键]     | 在多个panes中切换，下一个  |
 |  ctrl-b q     | 显示各panel编号  |
-|  ctrl-b c     | 创建一个新的window  |
 |  ctrl-b num     | 直接跳到你按的数字所在的window  |
 
 5. tmux结构示意图
