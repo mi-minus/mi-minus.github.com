@@ -118,7 +118,27 @@ sudo apt-get install terminator
 显示效果如下图：
 ![terminator](/res/img/blog/linux学习/terminator-screen.png)
 
-### 强大终端shell工具：[tmux](https://wiki.archlinux.org/index.php/tmux)
+### 强大的shell工具一: screen
+0. 简介
+```
+screen是linux下的一种多重视窗管理程序。在使用telnet或SSH远程登录linux时，如果连接非正常中断，重新连接时，系统将开一个新的session，无法恢复原来的session.screen命令可以解决这个问题。
+```
+
+1. 安装
+```sh
+sudo apt-get install screen
+```
+
+2. 基本命令
+
+| 快捷键      | 作用                       | 
+| ---------- |:-------------:             |
+|  screen -S session_name      | 创建一个叫session_name的会话    |
+|  screen -ls   | 列出会话  　　　   |
+|  screen -r session_name    | 重新进入到一个dettach的会话  　　　 |
+|  screen -d session_name    | 退出已attach的session  　　　 |
+
+### 强大终端shell工具二：[tmux](https://wiki.archlinux.org/index.php/tmux)
 0. 简介
 ```
 Tmux(terminal multiplexer) 是一个终端复用器: 可以激活多个终端或窗口, 在每个终端都可以单独访问，每一个终端都可以访问，运行和控制各自的程序.tmux类似于screen，可以关闭窗口将程序放在后台运行，需要的时候再重新连接
