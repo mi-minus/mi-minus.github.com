@@ -102,3 +102,45 @@ http.enabled: true
 http.cors.enabled: true
 http.cors.allow-origin: "*"
 ```
+
+### 安装(ES-Head for ES5.x)[http://orchome.com/489][https://github.com/mobz/elasticsearch-head]
+1. 执行 'npm run start' 出现 '/usr/bin/env: node: No such file or directory' -
+   解决方案：　'sudo apt-get install nodejs-legacy'
+2. 安装步骤
+    ```
+    1. 下载npm
+    sudo apt-get install nodejs
+    sudo apt-get install nodejs-legacy   // 不安装这个不能执行npm
+    ```
+    2. 下载github代码
+    ```
+    git clone git://github.com/mobz/elasticsearch-head.git
+    ```
+    3. 进入 elasticsearch-head 目录
+    ```
+    cd elasticsearch-head
+    ```
+    4. npm安装包
+    ```
+    npm install
+    ```
+    5. 修改elasticsearch-head下Gruntfile.js文件
+        connect: {
+              server: {
+                  options: {
+                      host: '0.0.0.0',
+                      port: 30005,  // 这个端口 为没有被占用的端口，用于访问head－web
+                      base: '.',
+                      keepalive: true
+                  }
+              }
+          }
+     6. 启动 es-head
+     ```sh
+     npm run start
+     ```
+     7. 查看浏览器配置
+     ```
+     http://xx.xx.xx.xx:30005
+     在这个页面填写 elasticsearch的对外端口(默认9200)- 
+     ```
