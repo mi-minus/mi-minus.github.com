@@ -2,6 +2,7 @@
 layout: life
 title: Mongo 聚合函数 Aggregate
 category: Mongo
+duoshuo: true
 date: 2017-02-17
 ---
 
