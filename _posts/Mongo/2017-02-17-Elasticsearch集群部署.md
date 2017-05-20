@@ -103,7 +103,7 @@ http.cors.enabled: true
 http.cors.allow-origin: "*"
 ```
 
-### 安装(ES-Head for ES5.x)[http://orchome.com/489][https://github.com/mobz/elasticsearch-head]
+### 安装[ES-Head for ES5.x](http://orchome.com/489)[https://github.com/mobz/elasticsearch-head]
 1. 执行 'npm run start' 出现 '/usr/bin/env: node: No such file or directory' -
    解决方案：　'sudo apt-get install nodejs-legacy'
 2. 安装步骤
