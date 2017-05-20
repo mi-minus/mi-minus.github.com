@@ -30,72 +30,72 @@ ElasticSearch是一个基于Lucene的搜索服务器。它提供了一个分布�
 3. 各服务器配置参数(舆情集群实例)
 ```
 ======================================== master[yuqing4] - configuration =============================================================
--------------------- Cluster --------------------------
+---- Cluster ------
 cluster.name: yuqing
-------------------- Node ----------------------------
+---- Node ---------
 node.name: node-yuqing4
-------------------- Paths ----------------------------
+---- Paths --------
 path.data: /yuqing/elasticsearch/data
-------------------- Network ----------------------------
+---- Network ------
 network.bind_host: ['ip内网xx.xx.xx.xx', 'ip外网:xx.xx.xx.xx']
 network.publish_host: ip内网xx.xx.xx.xx
-------------------- Discovery ----------------------------
+---- Discovery -----
 discovery.zen.ping.unicast.hosts: ['yuqing1-ip内网xx.xx.xx.xx', 'yuqing2-ip内网xx.xx.xx.xx', 'yuqing3-ip内网xx.xx.xx.xx', 'yuqing4-ip内网xx.xx.xx.xx']
-------------------- Various ----------------------------
+---- Various -------
 node.master: true
 node.data: false
 http.enabled: true
 http.cors.enabled: true
 http.cors.allow-origin: "*"
 ======================================== slave1 [yuqing1] - configuration =============================================================
--------------------- Cluster --------------------------
+---- Cluster -------
 cluster.name: yuqing
-------------------- Node ----------------------------
+----- Node ---------
 node.name: node-yuqing1
-------------------- Paths ----------------------------
+----- Paths --------
 path.data: /yuqing/elasticsearch/data
-------------------- Network ----------------------------
+----- Network ------
 network.bind_host: ['ip内网xx.xx.xx.xx']
 network.publish_host: ip内网xx.xx.xx.xx
-------------------- Discovery ----------------------------
+----- Discovery ----
 discovery.zen.ping.unicast.hosts: ['yuqing1-ip内网xx.xx.xx.xx', 'yuqing2-ip内网xx.xx.xx.xx', 'yuqing3-ip内网xx.xx.xx.xx', 'yuqing4-ip内网xx.xx.xx.xx']
-------------------- Various ----------------------------
+----- Various ------
 node.master: false
 node.data: true
 http.enabled: true
 http.cors.enabled: true
 http.cors.allow-origin: "*"
 ======================================== slave2 [yuqing2] - configuration =============================================================
--------------------- Cluster --------------------------
+---- Cluster -------
 cluster.name: yuqing
-------------------- Node ----------------------------
+---- Node ----------
 node.name: node-yuqing2
-------------------- Paths ----------------------------
+---- Paths ---------
 path.data: /yuqing/elasticsearch/data
-------------------- Network ----------------------------
+---- Network -------
 network.bind_host: ['ip内网xx.xx.xx.xx']
 network.publish_host: ip内网xx.xx.xx.xx
-------------------- Discovery ----------------------------
+----- Discovery ----
 discovery.zen.ping.unicast.hosts: ['yuqing1-ip内网xx.xx.xx.xx', 'yuqing2-ip内网xx.xx.xx.xx', 'yuqing3-ip内网xx.xx.xx.xx', 'yuqing4-ip内网xx.xx.xx.xx']
-------------------- Various ----------------------------
+----- Various ------
 node.master: false
 node.data: true
 http.enabled: true
 http.cors.enabled: true
 http.cors.allow-origin: "*"
 ======================================== slave3 [yuqing3] - configuration =============================================================
--------------------- Cluster --------------------------
+---- Cluster -------
 cluster.name: yuqing
-------------------- Node ----------------------------
+---- Node ----------
 node.name: node-yuqing3
-------------------- Paths ----------------------------
+---- Paths ---------
 path.data: /yuqing/elasticsearch/data
-------------------- Network ----------------------------
+---- Network -------
 network.bind_host: ['ip内网xx.xx.xx.xx']
 network.publish_host: ip内网xx.xx.xx.xx
-------------------- Discovery ----------------------------
+----- Discovery ----
 discovery.zen.ping.unicast.hosts: ['yuqing1-ip内网xx.xx.xx.xx', 'yuqing2-ip内网xx.xx.xx.xx', 'yuqing3-ip内网xx.xx.xx.xx', 'yuqing4-ip内网xx.xx.xx.xx']
-------------------- Various ----------------------------
+----- Various ------
 node.master: false
 node.data: true
 http.enabled: true
