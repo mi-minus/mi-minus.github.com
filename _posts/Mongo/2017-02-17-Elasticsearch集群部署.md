@@ -2,6 +2,7 @@
 layout: life
 title: Elasticsearch集群部署
 category: Mongo
+duoshuo: true
 date: 2017-05-20
 ---
 
