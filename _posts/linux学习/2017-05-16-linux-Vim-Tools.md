@@ -2,6 +2,7 @@
 layout: life
 title: linux Vim Tools介绍
 category: linux学习
+duoshuo: true
 date: 2017-05-16
 ---
 
