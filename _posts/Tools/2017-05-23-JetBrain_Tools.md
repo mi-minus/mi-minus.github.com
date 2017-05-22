@@ -6,9 +6,10 @@ duoshuo: true
 date: 2017-05-23
 ---
 
-    author: mr zhao
-    date: 2017-05-23
-    mail: minus@stu.xjtu.edu.cn
+    作者: mr zhao
+    编辑: minus
+    日期: 2017-05-23
+    邮箱: minus@stu.xjtu.edu.cn
 
 
 <!-- more -->
