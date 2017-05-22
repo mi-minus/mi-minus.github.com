@@ -1,0 +1,8 @@
+{
+"server":"47.88.18.164",
+"server_port":33333,
+"local_port":1080,
+"password":"chaoqianvpnq1w2e3r4",
+"timeout":600,
+"method":"aes-256-cfb"
+}
