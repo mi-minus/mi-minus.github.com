@@ -1,6 +1,6 @@
 ---
 layout: life
-title: JetBrain系列
+title: JetBrain_Tools
 category: Tools
 duoshuo: true
 date: 2017-05-23
