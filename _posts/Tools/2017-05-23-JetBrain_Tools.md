@@ -7,9 +7,9 @@ date: 2017-05-23
 ---
 
     author: mr zhao
-    editor: minus
     date: 2017-05-23
     mail: minus@stu.xjtu.edu.cn
+
 
 <!-- more -->
 
