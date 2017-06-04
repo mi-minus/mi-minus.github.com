@@ -232,6 +232,7 @@ filetype plugin indent on
 * 1 cd ~/.vim/bundle/YouCompleteMe
 * 2 ./install.py --clang-completer   //该步骤需要花点时间安装ycm
 * 3. ./install.py --clang-completer --system-libclang
+* 4. 安装博客（very nice）：https://valloric.github.io/YouCompleteMe/#ubuntu-linux-x64
 ```
 
 ### 快捷键
