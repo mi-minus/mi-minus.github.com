@@ -167,6 +167,8 @@ filetype plugin indent on
     * :PluginClean
 即可删除对应插件。插件更新频率较高，差不多每隔一个月你应该看看哪些插件有推出新版本，批量更新，只需执行
     * :PluginUpdate
+查看安装的插件
+    * :PluginList
 ```
 
 ### 系统vim后期处理
