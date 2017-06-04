@@ -142,6 +142,11 @@ In the parent directory of vim-colors-solarized:
 注意：
     * 上面三种主题文件 xxx.vim[molokai.vim/ phd.vim/ solarized.vim] 均放到 ~/.vim/colors/　下面
     * 在~/.vimrc中 填写 colorscheme molokai / colorscheme solarized ,通过这种方式实现 主题的应用
+    " 配色方案如下：
+    set background=dark
+    colorscheme solarized
+    "colorscheme molokai
+    "colorscheme phd
 ```
 
 ### bundle安装
