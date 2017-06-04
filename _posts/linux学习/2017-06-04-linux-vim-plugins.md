@@ -49,7 +49,8 @@ cp ~/.vim/bundle/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
     :%retab!
     ```
     3. 空格　-> tab
-    ```:set ts=4
+    ```
+    :set ts=4
     :set noexpandtab
     :%retab!
     ```
