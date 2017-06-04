@@ -136,6 +136,7 @@ In the parent directory of vim-colors-solarized:
 ```
 
 4. 配置主题风格
+
 ```
 一套好的配色方案绝对会影响你的编码效率，vim 内置了 10 多种配色方案供你选择，GUI 下，可以通过菜单（Edit -> Color Scheme）试用不同方案，字符模式下，需要你手工调整配置信息，再重启 vim 查看效果（csExplorer 插件，可在字符模式下不用重启即可查看效果）。不满意，可以去 http://vimcolorschemetest.googlecode.com/svn/html/index-c.html 慢慢选。我自认为“阅美无数”，目前最夯三甲：
     * 素雅 solarized（https://github.com/altercation/vim-colors-solarized ）
