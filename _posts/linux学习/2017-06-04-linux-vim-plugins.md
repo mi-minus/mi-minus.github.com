@@ -1,6 +1,6 @@
 ---
 layout: life
-title: linux基础操作
+title: linux-vim-plugins
 category: linux学习
 duoshuo: true
 date: 2017-05-16
