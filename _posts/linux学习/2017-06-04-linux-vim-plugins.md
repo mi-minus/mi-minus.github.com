@@ -90,6 +90,8 @@ set foldmethod=syntax
 " 启动 vim 时关闭折叠代码
 set nofoldenable
 " 操作：za，打开或关闭当前折叠；zM，关闭所有折叠；zR，打开所有折叠
+" 实现鼠标移动/定位/点击等
+set mouse=a
 """""""
 set nu                                                                                                                                                                                                              
 set encoding=utf-8
@@ -238,6 +240,16 @@ filetype plugin indent on
 ```
 :sv <filename>命令打开一个文件，你可以纵向分割布局（新文件会在当前文件下方界面打开），
 :vs <filename>， 你可以得到横向分割布局（新文件会在当前文件右侧界面打开
+```
+
+2. vim屏幕切换
+```
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+组合快捷键： - Ctrl-j 切换到下方的分割窗口 - Ctrl-k 切换到上方的分割窗口 - Ctrl-l 切换到右侧的分割窗口 - Ctrl-h 切换到左侧的分割窗口
 ```
 
 ### 系统vim后期处理
