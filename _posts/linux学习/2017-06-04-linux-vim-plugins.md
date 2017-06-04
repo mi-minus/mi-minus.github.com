@@ -151,6 +151,16 @@ In the parent directory of vim-colors-solarized:
     "colorscheme phd
 ```
 
+5. 配置光标
+```
+* vim 十字光标
+"height ligth cusor
+set t_Co=256
+set cursorline
+set cursorcolumn
+highlight CursorLine cterm=none ctermbg=236
+highlight CursorColumn cterm=none ctermbg=236
+```
 ### bundle安装
 
 0. 基本信息
