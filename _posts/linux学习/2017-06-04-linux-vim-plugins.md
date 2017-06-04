@@ -3,11 +3,11 @@ layout: life
 title: linux-vim-plugins
 category: linux学习
 duoshuo: true
-date: 2017-05-16
+date: 2017-06-04
 ---
 
     作者: minus
-    时间: 2017-05-23
+    时间: 2017-06-04
     版本: V0.0.1
     mail: minus@stu.xjtu.edu.cn
 
