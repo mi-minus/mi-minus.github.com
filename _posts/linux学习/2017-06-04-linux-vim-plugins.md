@@ -203,6 +203,19 @@ filetype plugin indent on
     * :PluginList
 ```
 
+4. plugin离线安装
+```
+离线安装:先在线安装Pathogen插件,然后将其他github安装包放到~/.vim/bundle/下， 进入vim 执行 :PluginInstall 就自动安装了，不用联网，速度很快
+```
+
+5. [安装 YouCompleteMe](http://www.mamicode.com/info-detail-1596462.html)
+```
+* 先编辑.vimrc和运行 :PluginInstall 命令实现安装YouCompleteMe (这时候还不能用)
+* 1 cd ~/.vim/bundle/YouCompleteMe
+* 2 ./install.py --clang-completer   //该步骤需要花点时间安装ycm
+* 3. ./install.py --clang-completer --system-libclang
+```
+
 ### 快捷键
 
 1. 分屏
@@ -234,4 +247,3 @@ filetype plugin indent on
     ```
     * 加!是用于处理非空白字符之后的TAB，即所有的TAB，若不加!，则只处理行首的TAB。
         
-离线安装:先在线安装Pathogen插件,然后将其他github安装包放到~/.vim/bundle/下， 进入vim 执行 :PluginInstall 就自动安装了，不用联网，速度很快
