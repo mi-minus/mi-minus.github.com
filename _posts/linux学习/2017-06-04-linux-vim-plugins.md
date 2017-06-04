@@ -84,6 +84,12 @@ set cursorcolumn
 set hlsearch
 " 禁止折行
 set nowrap
+" 基于缩进或语法进行代码折叠
+"set foldmethod=indent
+set foldmethod=syntax
+" 启动 vim 时关闭折叠代码
+set nofoldenable
+" 操作：za，打开或关闭当前折叠；zM，关闭所有折叠；zR，打开所有折叠
 """""""
 set nu                                                                                                                                                                                                              
 set encoding=utf-8
@@ -195,6 +201,14 @@ filetype plugin indent on
     * :PluginUpdate
 查看安装的插件
     * :PluginList
+```
+
+### 快捷键
+
+1. 分屏
+```
+:sv <filename>命令打开一个文件，你可以纵向分割布局（新文件会在当前文件下方界面打开），
+:vs <filename>， 你可以得到横向分割布局（新文件会在当前文件右侧界面打开
 ```
 
 ### 系统vim后期处理
