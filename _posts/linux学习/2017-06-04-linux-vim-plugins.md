@@ -319,5 +319,8 @@ nnoremap <C-H> <C-W><C-H>
     ```
     * 加!是用于处理非空白字符之后的TAB，即所有的TAB，若不加!，则只处理行首的TAB。
         
+### 展示界面
+1. ![vim界面](/res/download/linux/vim_background.png)
+
 ### VIM样例文件下载（仅供参考）
 1. [.vimrc](/res/download/linux/vimrc)
