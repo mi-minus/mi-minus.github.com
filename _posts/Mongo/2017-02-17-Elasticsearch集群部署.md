@@ -207,20 +207,20 @@ Removing any system startup links for /etc/init.d/test ...
 # Short-Description: Start daemon at boot time
 # Description:       Enable service provided by daemon.
 ### END INIT INFO
-export JAVA_HOME=/var/www/tomcat/jdk1.8
-export JRE_HOME=${JAVA_HOME}/jre
-export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
-export PATH=${JAVA_HOME}/bin:$PATH
+export JAVA_HOME=/var/www/tomcat/jdk1.8              # 需修改
+export JRE_HOME=${JAVA_HOME}/jre                     # 需修改
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib  # 需修改
+export PATH=${JAVA_HOME}/bin:$PATH                   # 需修改
 
-export ELA_HOME=/usr/local/elasticsearch-5.0.0/bin
-export PATH=$ELA_HOME:$PATH
+export ELA_HOME=/usr/local/elasticsearch-5.0.0/bin   # 需修改
+export PATH=$ELA_HOME:$PATH                          # 需修改
 
-ES_HOME=/usr/local/elasticsearch-5.0.0
-EXEC_PATH=$ES_HOME
-EXEC=elasticsearch
-DAEMON=$EXEC_PATH/bin/$EXEC
-PID_FILE=$ES_HOME/pid/es.pid
-ServiceName='Elasticsearch 5.0'  
+ES_HOME=/usr/local/elasticsearch-5.0.0               # 需修改
+EXEC_PATH=$ES_HOME                                   # 需修改
+EXEC=elasticsearch                           
+DAEMON=$EXEC_PATH/bin/$EXEC  
+PID_FILE=$ES_HOME/pid/es.pid                         # 注意需要创建这个pid目录(es本身没有该目录)
+ServiceName='Elasticsearch 5.0'                      # 可修改
   
 # . /etc/rc.d/init.d/functions  
   
@@ -232,7 +232,6 @@ fi
 stop()  
 {  
        echo "Stoping $ServiceName ..."  
-       ps aux | grep "$ES_HOME" | print $2
        ps aux | grep "$ES_HOME" | kill -9 `awk '{print $2}'`  >/dev/null 2>&1  
        rm -f $PID_FILE  
        sleep 1  
