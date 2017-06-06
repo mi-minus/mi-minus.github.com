@@ -146,3 +146,47 @@ http.cors.allow-origin: "*"
      在这个页面填写 elasticsearch的对外端口(默认9200)- 
      ```
 ```
+
+### Ubuntu系统中设置开机启动服务
+1. 将你的启动脚本复制到 /etc/init.d目录下
+```
+脚本文件为es
+```
+
+2. 设置脚本文件权限
+```
+sudo chmod 755 /etc/init.d/es
+```
+
+3. 执行如下命令将脚本放到启动脚本中去
+```
+cd /etc/init.d
+sudo update-rc.d es defaults 95
+备注: 其中数字95是脚本启动顺序号，按照自己的需要相应修改即可，在你有多个启动脚本，而它们之间又有先后启动的依赖关系时你就知道这个数字的具体作用了
+执行之后应该出现如下信息:
+update-rc.d: warning: /etc/init.d/test missing LSB information
+update-rc.d: see <http://wiki.debian.org/LSBInitScripts>
+  Adding system startup for /etc/init.d/test ...
+    /etc/rc0.d/K95test -> ../init.d/test
+    /etc/rc1.d/K95test -> ../init.d/test
+    /etc/rc6.d/K95test -> ../init.d/test
+    /etc/rc2.d/S95test -> ../init.d/test
+    /etc/rc3.d/S95test -> ../init.d/test
+    /etc/rc4.d/S95test -> ../init.d/test
+    /etc/rc5.d/S95test -> ../init.d/test
+```
+
+4. 卸载启动脚本的方法
+```
+cd /etc/init.d
+sudo update-rc.d -f es remove
+执行之后应该显示的信息:
+Removing any system startup links for /etc/init.d/test ...
+    /etc/rc0.d/K95test
+    /etc/rc1.d/K95test
+    /etc/rc2.d/S95test
+    /etc/rc3.d/S95test
+    /etc/rc4.d/S95test
+    /etc/rc5.d/S95test
+    /etc/rc6.d/K95test
+```
