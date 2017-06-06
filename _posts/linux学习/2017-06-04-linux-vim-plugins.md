@@ -214,6 +214,10 @@ Plugin 'sjl/gundo.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'lilydjwg/fcitx.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-scripts/tComment'
 " 插件列表结束
 call vundle#end()
 filetype plugin indent on
@@ -244,6 +248,17 @@ filetype plugin indent on
 * 2 ./install.py --clang-completer   //该步骤需要花点时间安装ycm
 * 3. ./install.py --clang-completer --system-libclang
 * 4. 安装博客（very nice）：https://valloric.github.io/YouCompleteMe/#ubuntu-linux-x64
+```
+6. vim中运行python
+```
+"===========  F5 run python ====================
+autocmd BufRead *.py set makeprg=python\ -c\ \"import\ py_compile,sys;\sys.stderr=sys.stdout;\ py_compile.compile(r'%'')\"
+autocmd BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+autocmd BufRead *.py nmap <F5> :!python %<CR>
+autocmd BufRead *.py set tabstop=4
+autocmd BufRead *.py set nowrap
+autocmd BufRead *.py set go+=b
+nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 ```
 
 ### 快捷键
