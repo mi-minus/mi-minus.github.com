@@ -85,8 +85,8 @@ set hlsearch
 " 禁止折行
 set nowrap
 " 基于缩进或语法进行代码折叠
-"set foldmethod=indent
-set foldmethod=syntax
+set foldmethod=indent  " 适合用于python
+set foldmethod=syntax  " 适合用于java等语言
 " 启动 vim 时关闭折叠代码
 set nofoldenable
 " 操作：za，打开或关闭当前折叠；zM，关闭所有折叠；zR，打开所有折叠
@@ -275,6 +275,8 @@ endf
 autocmd bufnewfile *.py call HeaderPython()
 " ======================================================="
 ```
+
+8. 
 
 ### 快捷键
 
