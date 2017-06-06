@@ -211,24 +211,29 @@ export JAVA_HOME=/var/www/tomcat/jdk1.8              # 需修改
 export JRE_HOME=${JAVA_HOME}/jre                     # 需修改
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib  # 需修改
 export PATH=${JAVA_HOME}/bin:$PATH                   # 需修改
-
+```
+```
 export ELA_HOME=/usr/local/elasticsearch-5.0.0/bin   # 需修改
 export PATH=$ELA_HOME:$PATH                          # 需修改
-
+```
+```
 ES_HOME=/usr/local/elasticsearch-5.0.0               # 需修改
 EXEC_PATH=$ES_HOME                                   # 需修改
 EXEC=elasticsearch                           
 DAEMON=$EXEC_PATH/bin/$EXEC  
 PID_FILE=$ES_HOME/pid/es.pid                         # 注意需要创建这个pid目录(es本身没有该目录)
 ServiceName='Elasticsearch 5.0'                      # 可修改
-  
+```
+```
 # . /etc/rc.d/init.d/functions  
-  
+```
+```
 if [ ! -x $DAEMON ] ; then  
        echo "ERROR: $DAEMON not found"  
        exit 1   
 fi  
-  
+```
+```
 stop()  
 {  
        echo "Stoping $ServiceName ..."  
@@ -237,7 +242,8 @@ stop()
        sleep 1  
        echo "Shutting down $ServiceName: [  successful  ]"  
 }  
-  
+```
+```
 start()  
 {  
        echo "Starting $ServiceName ..."  
@@ -246,13 +252,15 @@ start()
        sleep 1  
        echo "Starting $ServiceName: [  successful  ]"  
 }  
-
+```
+```
 restart()  
 {  
     stop  
     start  
 }  
-
+```
+```
 case "$1" in  
     start)  
         start  
