@@ -261,6 +261,21 @@ autocmd BufRead *.py set go+=b
 nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 ```
 
+7. vim python头信息配置
+```
+" ==================== python header file ==============="
+function HeaderPython()
+    call setline(1, "#!/usr/bin/env python")
+    call append(1, "#-*- coding:utf8 -*-")
+    call append(2, "# Power by MINUS" . strftime('%Y-%m-%d %T', localtime()))
+    normal G
+    normal o
+    normal o
+endf
+autocmd bufnewfile *.py call HeaderPython()
+" ======================================================="
+```
+
 ### 快捷键
 
 1. 分屏
