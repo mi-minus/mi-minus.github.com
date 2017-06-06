@@ -1,0 +1,243 @@
+set nu
+set encoding=utf-8
+set termencoding=utf-8
+set fileencoding=utf-8
+
+set textwidth=79
+set colorcolumn=85
+set cursorcolumn 
+set autoindent
+set fileformat=unix
+set splitbelow
+set splitright
+
+set background=dark
+" colorscheme solarized
+colorscheme molokai
+"colorscheme molokai
+"colorscheme phd
+
+" 自适应不同语言的智能缩进
+filetype indent on
+
+" 将制表符扩展为空格
+set expandtab
+
+" 设置vim支持鼠标光标定位，滚动上下移动"
+set mouse=a
+
+" 设置编辑时制表符占用空格数
+set tabstop=4
+
+" 设置格式化时制表符占用空格数
+set shiftwidth=4
+
+" 让vim 把连续数量的空格视为一个制表符
+set softtabstop=4
+
+set gcr=a:block-blinkon0
+
+" 总是显示状态栏
+set laststatus=2
+
+" 显示光标当前位置
+set ruler
+
+" 高亮显示当前行和列
+set cursorline
+set cursorcolumn
+
+" 高亮显示搜索结果
+set hlsearch
+
+" 设置 gvim显示字体
+set guifont=YaHei\ Consolas\ Hybrid\ 11.5
+
+" 开启语法高亮功能
+syntax enable
+
+" 允许用指定语法高亮配色方案替换默认方案
+syntax on
+
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+"　" vim 十字光标
+
+"height ligth cusor
+set t_Co=256
+set cursorline
+set cursorcolumn
+highlight CursorLine cterm=none ctermbg=236
+highlight CursorColumn cterm=none ctermbg=236"
+" ======================================
+" 开启文件类型检测
+filetype on
+
+" 根据侦测到的不同类型加载对应的插件
+filetype plugin on
+
+" 定义快捷键到行首到行尾
+nmap LB 0
+nmap LE $
+
+" 让配置变更立即生效
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
+
+" 设置状态栏主题风格
+let g:Powerline_colorscheme='solarized256'
+
+" ===========================================
+" 开启实时搜索功能
+set incsearch
+
+" 搜索时大小写不敏感
+set ignorecase
+
+" 关闭兼容模式
+set nocompatible
+
+" vim 自身命令行模式智能补全
+set wildmenu
+
+" ============== for color : molokai" ======
+let g:molokai_original = 1
+let g:rehash256 = 1
+
+" ==========================================
+" Vundle　环境配置
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+" vundle管理的插件列表必须位于 vundle#begin() 和 vundle#end()之间
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'tpope/vim-pathogen'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'klen/python-mode'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'majutsushi/tagbar'
+Plugin 'AutoClose'
+Plugin 'repeat.vim'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-commentary'
+" Plugin 'vim-scripts/taglish.vim'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-scripts/tComment'
+call vundle#end()
+filetype plugin indent on
+
+" ================== python-mode ==============="
+let g:pymode_rope=0
+let g:pymode_rope_lookup_project=0
+
+" ================== Documentation ==========="
+let g:pymode_doc=1
+let g:pymode_doc_key='K'
+
+" ================= Linting ==============="
+let g:pymode_lint=1
+let g:pymode_lint_checker="pyflakes,pep8"
+
+" ================= auto check on save ====="
+let g:pymode_lint_write=1
+
+" ================= enable breakpoints plugin =="
+let g:pymode_breakpoint=1
+let g:pymode_breakpoint_bind='<leader>b'
+
+" ================ syntax highligihting ======"
+let g:pymode_syntax=1
+let g:pymode_syntax_all=1
+let g:pymode_syntax_indent_errors=g:pymode_syntax_all
+let g:pymode_syntax_space_errors=g:pymode_syntax_all
+
+" ================ dont auto fold code ======="
+let g:pymode_folding=0
+
+" Support virtualenv
+let g:pymode_virtualenv=1
+
+" ================== vim-indent-guides =============
+" 随vim自启动
+let g:indent_guides_enable_on_vim_startup=1
+" 从第二层开始可视化显示缩进
+let g:indent_guides_start_level=2
+" 色块宽带
+let g:indent_guides_guide_size=1
+" 快捷键 i 开/关缩进可视化
+:nmap <silent><Leader>i <Plug>IndentGuidesToggle
+
+" ===============　代码折叠 =====================
+" 基于缩进或语法进行代码折叠
+set foldmethod=indent
+" set foldmethod=syntax
+" 启动vim时关闭折叠代码
+set nofoldenable
+
+" ================ Nerdtree =====================
+map <F2> :NERDTreeToggle<CR>
+
+" ================ tagbar ======================
+let g:tagbar_width=35
+let g:tagbar_autofocus=1
+nmap <F6> :TagbarToggle<CR>
+
+" ================== nerdcommenter ==========="
+let g:NERDSpaceDelims=1
+
+" ================== YCM ====================="
+" YCM
+
+set completeopt=longest,menu
+
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
+inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
+inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
+inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+
+let g:ycm_collect_identifiers_from_tags_files=1
+let g:ycm_min_num_of_chars_for_completion=2
+let g:ycm_cache_omnifunc=0
+let g:ycm_seed_identifiers_with_syntax=1
+let g:ycm_complete_in_comments = 1
+
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+"===========  F5 run python ====================
+autocmd BufRead *.py set makeprg=python\ -c\ \"import\ py_compile,sys;\sys.stderr=sys.stdout;\ py_compile.compile(r'%'')\"
+autocmd BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+autocmd BufRead *.py nmap <F5> :!python %<CR>
+
+autocmd BufRead *.py set tabstop=4
+autocmd BufRead *.py set nowrap
+autocmd BufRead *.py set go+=b
+
+nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+""=============================================""
+
+" ==================== python header file ==============="
+function HeaderPython()
+    call setline(1, "#!/usr/bin/env python")
+    call append(1, "#-*- coding:utf8 -*-")
+    call append(2, "# Power by MINUS" . strftime('%Y-%m-%d %T', localtime()))
+    normal G
+    normal o
+    normal o
+endf
+autocmd bufnewfile *.py call HeaderPython()
+" ======================================================="
