@@ -193,7 +193,7 @@ Removing any system startup links for /etc/init.d/test ...
     /etc/rc6.d/K95test
 ```
 
-5. es文件内容
+5. es文件内容[es不能由root执行,里面的两个start()函数根据具体情况选择]
 
 ```
 #!/bin/bash                                                                                                                                       
@@ -245,7 +245,7 @@ stop()
 }  
 ```
 ```
-start()  
+start()   # 只能用于 ubuntu用户执行 service es start，不能使用root用户执行
 {  
        echo "Starting $ServiceName ..."  
        $DAEMON >/dev/null 2>&1 &
@@ -253,6 +253,22 @@ start()
        sleep 1  
        echo "Starting $ServiceName: [  successful  ]"  
 }  
+```
+```
+start()   # 这个可以根据登陆用户选择执行方式,root用户执行时原理也是进入到非root的ubuntu下面执行
+{  
+       echo "Starting $ServiceName ..."  
+       ulimit -n 65536
+       if [`whoami` == "ubuntu"]
+           then $DAEMON >/dev/null 2>&1 &
+       else
+           su ubuntu -c '/bin/sh /usr/local/elasticsearch-5.0.0/bin/elasticsearch >/dev/null 2>&1 &'
+       fi  
+       pidof $EXEC > $PID_FILE  
+       sleep 1   
+       echo "Starting $ServiceName: [  successful  ]"  
+}  
+
 ```
 ```
 restart()  
