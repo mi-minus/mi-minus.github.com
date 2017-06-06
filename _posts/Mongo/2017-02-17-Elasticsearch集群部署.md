@@ -194,6 +194,7 @@ Removing any system startup links for /etc/init.d/test ...
 ```
 
 5. es文件内容
+
 ```
 #!/bin/bash                                                                                                                                       
 # chkconfig: 2345 10 90  
