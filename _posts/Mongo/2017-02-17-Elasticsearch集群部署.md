@@ -150,7 +150,7 @@ http.cors.allow-origin: "*"
 ### Ubuntu系统中设置开机启动服务
 1. 将你的启动脚本复制到 /etc/init.d目录下
 ```
-脚本文件为es
+脚本文件为es - [内容如5]
 ```
 
 2. 设置脚本文件权限
@@ -161,7 +161,8 @@ sudo chmod 755 /etc/init.d/es
 3. 执行如下命令将脚本放到启动脚本中去
 ```
 cd /etc/init.d
-sudo update-rc.d es defaults 95
+sudo -sH
+# update-rc.d es defaults 95
 备注: 其中数字95是脚本启动顺序号，按照自己的需要相应修改即可，在你有多个启动脚本，而它们之间又有先后启动的依赖关系时你就知道这个数字的具体作用了
 执行之后应该出现如下信息:
 update-rc.d: warning: /etc/init.d/test missing LSB information
@@ -179,7 +180,8 @@ update-rc.d: see <http://wiki.debian.org/LSBInitScripts>
 4. 卸载启动脚本的方法
 ```
 cd /etc/init.d
-sudo update-rc.d -f es remove
+sudo -sH
+# update-rc.d -f es remove
 执行之后应该显示的信息:
 Removing any system startup links for /etc/init.d/test ...
     /etc/rc0.d/K95test
@@ -189,4 +191,85 @@ Removing any system startup links for /etc/init.d/test ...
     /etc/rc4.d/S95test
     /etc/rc5.d/S95test
     /etc/rc6.d/K95test
+```
+
+5. es文件内容
+```
+#!/bin/bash                                                                                                                                       
+# chkconfig: 2345 10 90  
+# description: Elasticsearch Service ....  
+### BEGIN INIT INFO
+# Provides:          scriptname
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start daemon at boot time
+# Description:       Enable service provided by daemon.
+### END INIT INFO
+export JAVA_HOME=/var/www/tomcat/jdk1.8
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+
+export ELA_HOME=/usr/local/elasticsearch-5.0.0/bin
+export PATH=$ELA_HOME:$PATH
+
+ES_HOME=/usr/local/elasticsearch-5.0.0
+EXEC_PATH=$ES_HOME
+EXEC=elasticsearch
+DAEMON=$EXEC_PATH/bin/$EXEC
+PID_FILE=$ES_HOME/pid/es.pid
+ServiceName='Elasticsearch 5.0'  
+  
+# . /etc/rc.d/init.d/functions  
+  
+if [ ! -x $DAEMON ] ; then  
+       echo "ERROR: $DAEMON not found"  
+       exit 1   
+fi  
+  
+stop()  
+{  
+       echo "Stoping $ServiceName ..."  
+       ps aux | grep "$ES_HOME" | print $2
+       ps aux | grep "$ES_HOME" | kill -9 `awk '{print $2}'`  >/dev/null 2>&1  
+       rm -f $PID_FILE  
+       sleep 1  
+       echo "Shutting down $ServiceName: [  successful  ]"  
+}  
+  
+start()  
+{  
+       echo "Starting $ServiceName ..."  
+       $DAEMON >/dev/null 2>&1 &
+       pidof $EXEC > $PID_FILE  
+       sleep 1  
+       echo "Starting $ServiceName: [  successful  ]"  
+}  
+
+restart()  
+{  
+    stop  
+    start  
+}  
+
+case "$1" in  
+    start)  
+        start  
+        ;;  
+    stop)  
+        stop  
+        ;;  
+    restart)  
+        restart  
+        ;;  
+    status)  
+        status -p $PID_FILE $DAEMON  
+        ;;  
+    *)  
+        echo "Usage: service $ServiceName {start|stop|restart|status}"  
+        exit 1  
+esac  
+exit $?              
 ```
