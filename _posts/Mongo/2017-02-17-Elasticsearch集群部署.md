@@ -320,6 +320,7 @@ export PATH=$CASSANDRA_PATH:$PATH
 start()
 {
     echo "starting the cassandra..."
+    ulimit -n 65536
     su ubuntu -c "/usr/local/apache-cassandra-3.10/bin/cassandra > /home/ubuntu/cass.log"
     sleep 15
     echo "starting the kong..."
@@ -329,7 +330,7 @@ start()
 stop()
 {
     echo "stoping the kong..."
-    su ubuntu -c "/usr/local/bin/kong stop"
+    su ubuntu -c "/usr/local/bin/kong stop"                # 以ubuntu用户启动kong，否则的话将会是以root启动
     sleep 5
     echo "stoping the cassandra..."
     su ubuntu -c "pgrep -u ubuntu -f cassandra |  xargs kill -9"
