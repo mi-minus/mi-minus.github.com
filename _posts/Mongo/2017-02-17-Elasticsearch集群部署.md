@@ -297,3 +297,63 @@ case "$1" in
 esac  
 exit $?              
 ```
+
+6. cassandra开机启动文件
+```
+#!/bin/bash
+# chkconfig: 2345 10 90
+# description: CASSANDRA        
+### BEGIN INIT INFO
+# Provides:             name
+# Required-Start:       $remote_fs $syslog
+# Required-Stop:        $remote_fs $syslog
+# Default-Start:        2 3 4 5
+# Default-Stop:         0 1 6
+# Short-Description:    Start daemon at boot time
+# Description:          Enable service provided by daemon
+# END INIT INFO
+export JAVA_HOME=/usr/local/jdk1.8.0_121
+export PATH=$JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export CASSANDRA_PATH=/usr/local/apache-cassandra-3.10/bin
+export PATH=$CASSANDRA_PATH:$PATH
+start()
+{
+    echo "starting the cassandra..."
+    su ubuntu -c "/usr/local/apache-cassandra-3.10/bin/cassandra > /home/ubuntu/cass.log"
+    sleep 15
+    echo "starting the kong..."
+    su ubuntu -c "/usr/local/bin/kong start"
+    echo "started the cassandra!!!"
+}
+stop()
+{
+    echo "stoping the kong..."
+    su ubuntu -c "/usr/local/bin/kong stop"
+    sleep 5
+    echo "stoping the cassandra..."
+    su ubuntu -c "pgrep -u ubuntu -f cassandra |  xargs kill -9"
+    sleep 1
+    echo "shutdown the cassandra!!!"
+}
+restart()
+{
+    stop
+    start
+}
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart)
+        restart
+        ;;
+    *)
+        echo "Usage: start|stop|restart"
+        exit 1
+esac
+exit $?
+```
