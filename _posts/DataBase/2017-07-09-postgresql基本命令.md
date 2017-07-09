@@ -386,4 +386,14 @@ date: 2017-07-09
 	```
 
 ### postgresql 如何实现远程登陆
-1. 修改
+1. 修改 /etc/postgresql/9.5/main/pg_hba.conf
+	```
+	添加如下(0.0.0.0对任何网段均可访问，md5表示密码登陆)：
+	type  database user   address     method
+	host  all      all    0.0.0.0/0   md5
+	```
+	
+2. 重启pg
+	```
+	sudo service postgresql restart
+	```
