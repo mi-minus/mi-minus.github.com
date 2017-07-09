@@ -73,8 +73,8 @@ date: 2017-07-09
         * pg_global　表空间用于共享的系统表
         * pg_default 是template1和template0 数据库的缺省表空间
         * 为 'create table' | 'create index' | 'create database' 提供一个隐含的表空间
-	set default_tablespace = space1;
-	create table foo(i int);    // 该表就创建在space1　这个表空间里
+	* set default_tablespace = space1;
+	* create table foo(i int);    // 该表就创建在space1　这个表空间里
 	```
 	
 11. [创建/删除角色](http://files.postgres-xl.org/documentation/user-manag.html)
