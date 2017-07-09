@@ -26,13 +26,13 @@ date: 2017-07-09
 2. 查看表空间
 	```
 	\db
-        SELECT spcname FROM pg_tablespace; // 或者
+	SELECT spcname FROM pg_tablespace; // 或者
 	```
 	
 3. 查看数据库列表
 	```
 	\l
-        SELECT datname from pg_database;  // 或者
+	SELECT datname from pg_database;  // 或者
 	```
 	
 4. 查看数据库表: 只能查看当前 search_path　这个schema中的表（默认是public）,若要看其他schema下的表则需要修改search_path
@@ -191,13 +191,13 @@ date: 2017-07-09
 28. pg命令中开启一个linux的shell
 	```
         > \!　　　　-  进入shell
-        > exit 　　－　表示退出
+	> exit 　　－　表示退出
 	```
 	
 29. 查询缓存
 	```
         > \p             显示查询缓存区的内容 
-        > \r             重置(清除)查询缓存区 
+	> \r             重置(清除)查询缓存区 
 	```
 	
 30. 命令行中执行sql文件
@@ -213,7 +213,7 @@ date: 2017-07-09
 32. 查询本地外部表
 	```
         > \dE
-        > select * from pg_foreign_table
+	> select * from pg_foreign_table
 	```
 	
 33. 查看自定义函数
