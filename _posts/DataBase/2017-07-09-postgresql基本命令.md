@@ -126,6 +126,7 @@ date: 2017-07-09
 	
 18. 查看当前所处的schema
 	```
+	select current_schema();
 	show search_path;
 	```
 	
@@ -250,6 +251,11 @@ date: 2017-07-09
 38. 删除enum类型
 	```
 	drop type rw_value
+	```
+	
+39. 修改　数据库　管理员　密码 (远程登陆需要)
+	```
+	alter ROLE gpadmin with password 'minus';
 	```
 	
 ### [系统表](http://files.postgres-xl.org/documentation/catalogs.html)
