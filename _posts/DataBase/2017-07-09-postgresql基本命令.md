@@ -368,3 +368,22 @@ date: 2017-07-09
         ```
         regexp_matches
         ```
+
+### postgresql 文件路径
+1. 配置文件
+	```
+	/etc/postgresql/9.5/main
+	```
+	
+2. 插件位置
+	```
+	/usr/share/postgresql/9.5/extension
+	```
+	
+3. 可执行文件路径
+	```
+	/usr/lib/postgresql/9.5/bin
+	```
+
+### postgresql 如何实现远程登陆
+1. 修改
