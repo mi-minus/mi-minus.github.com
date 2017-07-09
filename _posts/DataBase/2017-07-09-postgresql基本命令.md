@@ -80,14 +80,14 @@ date: 2017-07-09
 11. [创建/删除角色](http://files.postgres-xl.org/documentation/user-manag.html)
 	```
 	create role name;
-        create role name LOGIN;
-        drop role name;
+	create role name LOGIN;
+	drop role name;
 	```
 	
 12. 查看用户
 	```
 	\du
-        SELECT rolname FROM pg_roles;
+	SELECT rolname FROM pg_roles;
 	```
 	
 13. 查看表结构
