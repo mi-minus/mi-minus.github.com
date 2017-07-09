@@ -79,15 +79,15 @@ date: 2017-07-09
 	
 11. [创建/删除角色](http://files.postgres-xl.org/documentation/user-manag.html)
 	```
-	create role name;
-	create role name LOGIN;
-	drop role name;
+	> create role name;
+	> create role name LOGIN;
+	> drop role name;
 	```
 	
 12. 查看用户
 	```
-	\du
-	SELECT rolname FROM pg_roles;
+	> \du
+	> SELECT rolname FROM pg_roles;
 	```
 	
 13. 查看表结构
@@ -98,22 +98,22 @@ date: 2017-07-09
 	
 14. 表中添加字段
 	```
-	alter table [表名] add column [字段名] [类型]; 
-        alter table [表名] drop column [字段名]; 
-        alter table [表名] rename column [字段名A] to [字段名B]; 
-        ALTER TABLE journal ALTER keyword TYPE character(350)
+	> alter table [表名] add column [字段名] [类型]; 
+        > alter table [表名] drop column [字段名]; 
+        > alter table [表名] rename column [字段名A] to [字段名B]; 
+        > ALTER TABLE journal ALTER keyword TYPE character(350)
 	```
 	
 15. 表重命名
 	```
-	alter table [表名A] rename to [表名B]
+	> alter table [表名A] rename to [表名B]
 	```
 	
 16. 查看当前以什么用户登陆什么数据库
 	```
-        \c
-        \c another-database username　: 连接到另一个数据库
-        \c database1 user1 : 以user1用户登陆数据库database1
+        > \c
+        > \c another-database username　: 连接到另一个数据库
+        > \c database1 user1 : 以user1用户登陆数据库database1
 	```
 	
 17. 查看全部schemas　
@@ -121,119 +121,119 @@ date: 2017-07-09
         * http://www.freeoa.net/osuport/db/postgres-db-schema-table-space-user-refer_3073.html
         * schemas包含数据库对象（表／视图／索引／包／过程／函数／queues/triggers/types/sequences/等等）的集合，
         * schemas　属于逻辑概念,可在不同模式下创建相同的表名
-	\dn
+	> \dn
 	```
 	
 18. 查看当前所处的schema
 	```
-	show search_path;
+	> show search_path;
 	```
 	
 19. 修改数据库属性(schema)
 	```
-	ALTER DATABASE mydatabase SET search_path TO myschema, public, pg_catalog;
+	> ALTER DATABASE mydatabase SET search_path TO myschema, public, pg_catalog;
 	```
 	
 20. [创建用户](https://support.rackspace.com/how-to/postgresql-creating-and-dropping-roles/)
 	```
-        CREATE ROLE minus CREATEROLE CREATEDB SUPERUSER LOGIN ;　-　用户设置权限
-        grant all on database gpadmin to minus;              -　用户授权数据库
-        alter ROLE gpadmin with password 'minus';            - 用户设置密码
+        > CREATE ROLE minus CREATEROLE CREATEDB SUPERUSER LOGIN ;　-　用户设置权限
+        > grant all on database gpadmin to minus;              -　用户授权数据库
+        > alter ROLE gpadmin with password 'minus';            - 用户设置密码
 	```
 	
 21. 创建/删除 schema : schema 是跟 数据库走，而不是用户走 
 	```
-        CREATE SCHEMA myschema;   // 归属者默认为当前登陆的用户
-        CREATE SCHEMA schemaname AUTHORIZATION username;   // 指定schema的归属者
-        DROP SCHEMA myschema;
-        DROP SCHEMA myschema CASCADE; - 删除 schema　下的所有表／数据／函数等等
+        > CREATE SCHEMA myschema;   // 归属者默认为当前登陆的用户
+        > CREATE SCHEMA schemaname AUTHORIZATION username;   // 指定schema的归属者
+        > DROP SCHEMA myschema;
+        > DROP SCHEMA myschema CASCADE; - 删除 schema　下的所有表／数据／函数等等
 	```
 	
 22. 查看一个数据库在哪个表空间上
 	```
-        select datname, dattablespace from pg_database where datname ='chaoqian';
-        select oid,spcname from pg_tablespace where oid=16396;
+        > select datname, dattablespace from pg_database where datname ='chaoqian';
+        > select oid,spcname from pg_tablespace where oid=16396;
 	```
 	
 23. 查看schema的默认路径和重新设置
 	```
-        show search_path;                             -- show the current search_path
-        create schema my_schema ;grant all on schema xxx to user;  -- create another schema    
-        set search_path to my_schema;                 -- change search_path on a connection-level 临时改变
-        alter database xxx set search to my_schema;   -- change search_path on a database-level 　一直改变
+        > show search_path;                             -- show the current search_path
+        > create schema my_schema ;grant all on schema xxx to user;  -- create another schema    
+        > set search_path to my_schema;                 -- change search_path on a connection-level 临时改变
+        > alter database xxx set search to my_schema;   -- change search_path on a database-level 　一直改变
 	```
 	
 24. 设置默认表空间
 	```
-	set default_tablespace=tablespacename
+	> set default_tablespace=tablespacename
 	```
 	
 25. [copy csv to pg_table](http://www.postgresguide.com/utilities/copy.html)
 	```
-        \copy address (id, name, parentid, level, checkid, flag) from '/home/minus/Seafile/Seafile/yuqing_bgdev/personal/minus/pg_cp/address.csv' with csv header;
-        \copy address (id, name, parentid, level, checkid, flag) from '/home/minus/Seafile/Seafile/yuqing_bgdev/personal/minus/pg_cp/address.csv' delimiter ','  csv header;
-        \copy my_table to 'filename' csv header    -  导出1
-        \COPY (select id,name from tablename) TO 'filepath/aa.csv' DELIMITER ',' CSV HEADER;  - 导出2
+        > \copy address (id, name, parentid, level, checkid, flag) from '/home/minus/Seafile/Seafile/yuqing_bgdev/personal/minus/pg_cp/address.csv' with csv header;
+        > \copy address (id, name, parentid, level, checkid, flag) from '/home/minus/Seafile/Seafile/yuqing_bgdev/personal/minus/pg_cp/address.csv' delimiter ','  csv header;
+        > \copy my_table to 'filename' csv header    -  导出1
+        > \COPY (select id,name from tablename) TO 'filepath/aa.csv' DELIMITER ',' CSV HEADER;  - 导出2
 	```
 	
 26. pg命令行中执行 linux命令
 	```
-        \cd path
-        \! ls 
-        \! pwd
+        > \cd path
+        > \! ls 
+        > \! pwd
 	```
 	
 27. pg命令行中开启时间计时器
 	```
-	\timing
+	> \timing
 	```
 	
 28. pg命令中开启一个linux的shell
 	```
-        \!　　　　-  进入shell
-        exit 　　－　表示退出
+        > \!　　　　-  进入shell
+        > exit 　　－　表示退出
 	```
 	
 29. 查询缓存
 	```
-        \p             显示查询缓存区的内容 
-        \r             重置(清除)查询缓存区 
+        > \p             显示查询缓存区的内容 
+        > \r             重置(清除)查询缓存区 
 	```
 	
 30. 命令行中执行sql文件
 	```
-	\i basics.sql
+	> \i basics.sql
 	```
 	
 31. 查看安装的插件
 	```
-	\dx
+	> \dx
 	```
 	
 32. 查询本地外部表
 	```
-        \dE
-        select * from pg_foreign_table
+        > \dE
+        > select * from pg_foreign_table
 	```
 	
 33. 查看自定义函数
 	```
-	\df
+	> \df
 	```
 	
 34. [执行计划解释](https://www.postgresql.org/docs/9.5/static/using-explain.html)
 	```
-        explain(select count(1) from com_patientinfo);
-        explain analyze(select count(1) from com_patientinfo);  - 可以查看 执行计划时间和　执行时间
+        > explain(select count(1) from com_patientinfo);
+        > explain analyze(select count(1) from com_patientinfo);  - 可以查看 执行计划时间和　执行时间
 	```
 	
 35. 创建索引
 	```
-        CREATE INDEX test1_id_index ON test1 (id);           - B-Tree索引
-        CREATE INDEX name ON table USING hash (column);      - Hash索引
+        > CREATE INDEX test1_id_index ON test1 (id);           - B-Tree索引
+        > CREATE INDEX name ON table USING hash (column);      - Hash索引
                                                              - GIST索引
                                                              - GIN索引  
-        CREATE UNIQUE INDEX name ON table (column [, ...]);　- 唯一索引：只有B-Tree索引可以被声明为唯一索引
+        > CREATE UNIQUE INDEX name ON table (column [, ...]);　- 唯一索引：只有B-Tree索引可以被声明为唯一索引
 	```
 	
 36. psql命令修改默认状态
@@ -244,12 +244,12 @@ date: 2017-07-09
 	
 37. 查看enum 的所有类型取值情况
 	```
-	select t.typname, e.enumlabel from pg_type t, pg_enum e where t.oid=e.enumtypid;
+	> select t.typname, e.enumlabel from pg_type t, pg_enum e where t.oid=e.enumtypid;
 	```
 	
 38. 删除enum类型
 	```
-	drop type rw_value
+	> drop type rw_value
 	```
 	
 ### [系统表](http://files.postgres-xl.org/documentation/catalogs.html)
