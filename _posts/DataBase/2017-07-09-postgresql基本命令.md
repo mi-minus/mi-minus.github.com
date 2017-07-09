@@ -323,17 +323,17 @@ date: 2017-07-09
     ```
     对于非空输入，IS DISTINCT FROM与<>操作符相同。但是，假如两个输入都是空，那么它将返回假，而如果只有一个输入是空，那么它将返回真。相似地，对于非空输入IS NOT DISTINCT FROM和=是一样的，但是它在两个输入为空时返回真，只有一个输入为空是返回假。所以，这些结构实际上表现得似乎空值是一个普通数据值，而不是"未知"。
     ```
-3. pg常用的字符串操作符函数[http://postgres.cn/docs/9.5/functions-string.html]
+3. [pg常用的字符串操作符函数](http://postgres.cn/docs/9.5/functions-string.html)
     ```
     SQL字符串函数
     如: trim() lower() substring() chr()
     ```
     ```
-    数据类型格式化函数[http://postgres.cn/docs/9.5/functions-formatting.html]
+    [数据类型格式化函数](http://postgres.cn/docs/9.5/functions-formatting.html)
     如: to_char  to_date to_number
     ```
     ```
-    时间类函数[http://postgres.cn/docs/9.5/functions-datetime.html]
+    [时间类函数](http://postgres.cn/docs/9.5/functions-datetime.html)
     PostgreSQL提供了许多返回当前日期和时间的函数:
     CURRENT_DATE
     CURRENT_TIME
@@ -345,7 +345,7 @@ date: 2017-07-09
     LOCALTIME(precision)
     LOCALTIMESTAMP(precision)
     ```
-4. pg模式匹配[http://postgres.cn/docs/9.5/functions-matching.html]
+4. [pg模式匹配](http://postgres.cn/docs/9.5/functions-matching.html)
     * like 
         ```
         'abc' LIKE 'abc'    true
