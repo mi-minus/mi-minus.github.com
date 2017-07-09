@@ -19,7 +19,16 @@ date: 2017-07-09
 ### Postgresql 常用链接
 1. 官方中文文档: http://postgres.cn/docs9.6/ [9.5 9.4]
 2. pg资料大全: https://github.com/ty4z2008/Qix/blob/master/pg.md
-
+1. 视图[http://postgres.cn/docs/9.6/tutorial-views.html]
+2. 事务[http://postgres.cn/docs/9.6/tutorial-transactions.html]
+3. 窗口函数[http://postgres.cn/docs/9.6/tutorial-window.html]
+    * over
+    * partition by
+4. 继承[http://postgres.cn/docs/9.6/tutorial-inheritance.html]
+5. SQL全集[http://postgres.cn/docs/9.6/sql-commands.html]
+6. json数据类型: 12个Json相关函数: to_json/ row_to_json/ array_to_json  [http://www.zhangxiaojian.name/postgrsql-%e4%b8%ad%e7%9a%84-json-%e4%bb%8e%e4%bd%bf%e7%94%a8%e5%88%b0%e6%ba%90%e7%a0%81/]
+7. 数组类型: 
+8. MVCC(多版本并发控制)的原理：[http://www.jb51.net/article/52020.htm]
 
 ### Postgresql基本命令
 1. 关闭指定数据库
