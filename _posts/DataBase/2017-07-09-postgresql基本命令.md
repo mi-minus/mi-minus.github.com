@@ -99,9 +99,9 @@ date: 2017-07-09
 14. 表中添加字段
 	```
 	> alter table [表名] add column [字段名] [类型]; 
-        > alter table [表名] drop column [字段名]; 
-        > alter table [表名] rename column [字段名A] to [字段名B]; 
-        > ALTER TABLE journal ALTER keyword TYPE character(350)
+	> alter table [表名] drop column [字段名]; 
+	> alter table [表名] rename column [字段名A] to [字段名B]; 
+	> ALTER TABLE journal ALTER keyword TYPE character(350)
 	```
 	
 15. 表重命名
@@ -111,9 +111,9 @@ date: 2017-07-09
 	
 16. 查看当前以什么用户登陆什么数据库
 	```
-        > \c
-        > \c another-database username　: 连接到另一个数据库
-        > \c database1 user1 : 以user1用户登陆数据库database1
+	> \c
+	> \c another-database username　: 连接到另一个数据库
+	> \c database1 user1 : 以user1用户登陆数据库database1
 	```
 	
 17. 查看全部schemas　
