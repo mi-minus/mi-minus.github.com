@@ -16,6 +16,11 @@ date: 2017-07-09
 
 *******
 
+### Postgresql 常用链接
+1. 官方中文文档: http://postgres.cn/docs9.6/ [9.5 9.4]
+2. pg资料大全: https://github.com/ty4z2008/Qix/blob/master/pg.md
+
+
 ### Postgresql基本命令
 1. 关闭指定数据库
 	```
@@ -392,8 +397,13 @@ date: 2017-07-09
 	type  database user   address     method
 	host  all      all    0.0.0.0/0   md5
 	```
-	
-2. 重启pg
+
+2. 修改 /etc/postgresql/9.5/main/postgresql.conf
+	```
+	listen_addresses = '*'
+	```
+
+3. 重启pg
 	```
 	sudo service postgresql restart
 	```
