@@ -297,7 +297,11 @@ nnoremap <C-H> <C-W><C-H>
 ```
 
 ### 系统vim后期处理
-
+* vim 以非root权限编辑root文件后强制保存方法
+```
+:w !sudo tee %
+然后输入密码并进行保存
+```
 
 * vim 设置　tab 为　4个空格
     1. vimrc 修改
