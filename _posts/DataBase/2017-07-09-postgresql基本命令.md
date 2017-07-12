@@ -69,6 +69,8 @@ date: 2017-07-09
 7. 创建指定路劲的表空间
 	```
 	create tablespace fastspace location '/mnt/sda1/postgresl/data';  //注意该路径必须在集群每台机器上都要事先创建好（空目录且属于postgresql系统用户），不然会报错 
+	show default_tablespace;  // 显示默认表空间
+	\db; \db ts_name          // 显示所有表空间信息
 	```
 	
 8. 删除表空间
