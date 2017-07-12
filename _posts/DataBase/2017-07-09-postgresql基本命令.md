@@ -41,7 +41,7 @@ date: 2017-07-09
 	
 2. 查看表空间
 	```
-	\db
+	\db   or  \db tablespace_name
 	SELECT spcname FROM pg_tablespace; // 或者
 	```
 	
@@ -274,6 +274,11 @@ date: 2017-07-09
 39. 修改　数据库　管理员　密码 (远程登陆需要)
 	```
 	alter ROLE gpadmin with password 'minus';
+	```
+	
+40. 查找某个表的相对路径
+	```
+	select pg_relation_filepath('item');
 	```
 	
 ### [系统表](http://files.postgres-xl.org/documentation/catalogs.html)
