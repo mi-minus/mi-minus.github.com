@@ -288,13 +288,18 @@ date: 2017-07-09
 	select pg_relation_filepath('item');
 	```
 	
-41. 查看数据库/表/表空间/索引大小等
+41. 查看数据库/表/表空间/索引大小等[pg大小默认是Byte, 得到MB 得需要除以 1024*1024]
 	```
 	select pg_database_size(current_database());    -- 查看当前库大小
 	select sum(pg_database_size(datname)) from pg_database;   -- 查询所有库大小之和
-	select pg_relation_size('accounts');            -- 查询表大小
+	select pg_size_pretty(pg_relation_size('indexnamt'));            -- 查询一个索引大小
+	select pg_size_pretty(pg_total_relation_size('test5'));    -- pg_size_pretty函数直接得到 MB
 	select pg_total_relation_size('accounts');      -- 查询包含表和表索引其他总大小
 	select pg_tablespace_size('tbs_index')/1024/1024 as 'size m';   -- 查看表空间大小
+	select indexrelname,pg_size_pretty( pg_relation_size(relid)) from pg_stat_user_indexes where schemaname = 'schemaname' order by pg_relation_size(relid) desc; --查看所有 schema里面索引大小，大到小的顺序排列：
+	select relname, pg_size_pretty(pg_relation_size(relid))
+from pg_stat_user_tables where schemaname = 'schemaname' order by pg_relation_size(relid) desc;   --查看所有 schema里面表的大小，从大到小顺序排列：
+	select pg_database.datname,pg_size_pretty(pg_database_size(pg_database.datname)) AS size from pg_database;  --查看数据库大小：
 	>
 	select date_trunc('second', current_timestamp - pg_postmaster_start_time()) as uptime;  -- 查看数据库开启多久
 	select pg_postmaster_start_time();    -- 什么时候开启的
