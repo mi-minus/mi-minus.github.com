@@ -297,8 +297,7 @@ date: 2017-07-09
 	select pg_total_relation_size('accounts');      -- 查询包含表和表索引其他总大小
 	select pg_tablespace_size('tbs_index')/1024/1024 as 'size m';   -- 查看表空间大小
 	select indexrelname,pg_size_pretty( pg_relation_size(relid)) from pg_stat_user_indexes where schemaname = 'schemaname' order by pg_relation_size(relid) desc; --查看所有 schema里面索引大小，大到小的顺序排列：
-	select relname, pg_size_pretty(pg_relation_size(relid))
-from pg_stat_user_tables where schemaname = 'schemaname' order by pg_relation_size(relid) desc;   --查看所有 schema里面表的大小，从大到小顺序排列：
+	select relname, pg_size_pretty(pg_relation_size(relid)) from pg_stat_user_tables where schemaname = 'schemaname' order by pg_relation_size(relid) desc;   --查看所有 schema里面表的大小，从大到小顺序排列：
 	select pg_database.datname,pg_size_pretty(pg_database_size(pg_database.datname)) AS size from pg_database;  --查看数据库大小：
 	>
 	select date_trunc('second', current_timestamp - pg_postmaster_start_time()) as uptime;  -- 查看数据库开启多久
