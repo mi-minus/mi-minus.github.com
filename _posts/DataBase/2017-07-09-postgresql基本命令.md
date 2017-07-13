@@ -304,6 +304,12 @@ date: 2017-07-09
 	select pg_postmaster_start_time();    -- 什么时候开启的
 	```
 	
+42. 数据类型转化
+	```
+	CAST ( expression AS type );
+	'xxx'::type    ->  SELECT CAST ('100' AS INTEGER);
+	```
+	
 ### [系统表](http://files.postgres-xl.org/documentation/catalogs.html)
 1. pg_database　: 查看各个数据库情况
     	```
