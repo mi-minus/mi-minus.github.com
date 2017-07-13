@@ -41,6 +41,12 @@ date: 2017-07-09
 	\c    -- 可以直接查看当前用户连接了哪个数据库
 	```
 
+0. 创建用户及数据库
+	```
+	CREATE USER postgres_user WITH PASSWORD 'password';
+	CREATE DATABASE my_postgres_db OWNER postgres_user;
+	```
+
 1. 关闭指定数据库
 	```
 	select datname, pid from pg_stat_activity;  - 查看各数据库链接情况
@@ -144,9 +150,9 @@ date: 2017-07-09
 	
 17. 查看全部schemas　
 	```
-	* http://www.freeoa.net/osuport/db/postgres-db-schema-table-space-user-refer_3073.html
-	* schemas包含数据库对象（表／视图／索引／包／过程／函数／queues/triggers/types/sequences/等等）的集合，
-	* schemas　属于逻辑概念,可在不同模式下创建相同的表名
+	http://www.freeoa.net/osuport/db/postgres-db-schema-table-space-user-refer_3073.html
+	schemas包含数据库对象（表／视图／索引／包／过程／函数／queues/triggers/types/sequences/等等）的集合，
+	schemas　属于逻辑概念,可在不同模式下创建相同的表名
 	> \dn
 	```
 	
