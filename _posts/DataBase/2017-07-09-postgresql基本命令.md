@@ -33,6 +33,13 @@ date: 2017-07-09
 ```
 
 ### Postgresql基本命令
+0. 查看当前版本号 和 查看当前数据库 查看当前用户
+	```
+	select version();
+	select current_database();
+	select current_user;
+	```
+
 1. 关闭指定数据库
 	```
 	select datname, pid from pg_stat_activity;  - 查看各数据库链接情况
@@ -279,6 +286,18 @@ date: 2017-07-09
 40. 查找某个表的相对路径
 	```
 	select pg_relation_filepath('item');
+	```
+	
+41. 查看数据库/表/表空间/索引大小等
+	```
+	select pg_database_size(current_database());    -- 查看当前库大小
+	select sum(pg_database_size(datname)) from pg_database;   -- 查询所有库大小之和
+	select pg_relation_size('accounts');            -- 查询表大小
+	select pg_total_relation_size('accounts');      -- 查询包含表和表索引其他总大小
+	select pg_tablespace_size('tbs_index')/1024/1024 as 'size m';   -- 查看表空间大小
+	>
+	select date_trunc('second', current_timestamp - pg_postmaster_start_time()) as uptime;  -- 查看数据库开启多久
+	select pg_postmaster_start_time();    -- 什么时候开启的
 	```
 	
 ### [系统表](http://files.postgres-xl.org/documentation/catalogs.html)
