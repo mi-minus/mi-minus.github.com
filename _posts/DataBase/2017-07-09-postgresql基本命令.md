@@ -38,6 +38,7 @@ date: 2017-07-09
 	select version();
 	select current_database();
 	select current_user;
+	\c    -- 可以直接查看当前用户连接了哪个数据库
 	```
 
 1. 关闭指定数据库
