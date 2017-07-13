@@ -305,7 +305,7 @@ date: 2017-07-09
 	select pg_postmaster_start_time();    -- 什么时候开启的
 	```
 	
-42. 数据类型转化
+42. [数据类型转化](http://www.postgresqltutorial.com/postgresql-cast/)
 	```
 	CAST ( expression AS type );
 	'xxx'::type    ->  SELECT CAST ('100' AS INTEGER);
