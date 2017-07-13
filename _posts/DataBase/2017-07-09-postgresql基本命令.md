@@ -319,10 +319,12 @@ date: 2017-07-09
 	
 43. Vacuum
 ```
-1. vacuum 就是进行扫除，找到那些旧的“死”数据，把它们所知的行标记为可用状态。但是它不进行空间合并。
-2. vacuum full，就是除了 vacuum，还进行空间合并，因此它需要lock table。
-3. 而 autovacuum，可以理解为 定时自动进行  vacuum 。
-4. 对于有大量update 的表，vacuum full是没有必要的，因为它的空间还会再次增长，所以vacuum就足够了。
+	-vacuum 就是进行扫除，找到那些旧的“死”数据，把它们所知的行标记为可用状态。但是它不进行空间合并。
+ 	-vacuum full，就是除了 vacuum，还进行空间合并，因此它需要lock table。
+	-而 autovacuum，可以理解为 定时自动进行  vacuum 。
+ 	-对于有大量update 的表(被频繁操作)，vacuum full是没有必要的，因为它的空间还会再次增长，所以vacuum就足够了。
+	- vacuum full requires exclusive lock on the table it is working on
+	- 当一个表存在大量的死行数据的话，你需要使用vacuum full
 ```
 	
 ### [系统表](http://files.postgres-xl.org/documentation/catalogs.html)
