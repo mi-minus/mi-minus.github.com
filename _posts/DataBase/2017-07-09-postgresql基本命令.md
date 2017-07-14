@@ -327,6 +327,19 @@ date: 2017-07-09
 	- 当一个表存在大量的死行数据的话，你需要使用vacuum full
 	```
 	
+44. [查看表/索引中项的总数，及其所占的磁盘块数](http://postgres.cn/docs/9.6/planner-stats.html)
+	```
+	SELECT relname, relkind, reltuples, relpages FROM pg_class WHERE relname LIKE 'tenk1%';
+	       relname        | relkind | reltuples | relpages
+	----------------------+---------+-----------+----------
+	 tenk1                | r       |     10000 |      358
+	 tenk1_hundred        | i       |     10000 |       30
+	 tenk1_thous_tenthous | i       |     10000 |       30
+	 tenk1_unique1        | i       |     10000 |       30
+	 tenk1_unique2        | i       |     10000 |       30
+	(5 rows)
+	```
+	
 ### [系统表](http://files.postgres-xl.org/documentation/catalogs.html)
 1. pg_database　: 查看各个数据库情况
     	```
