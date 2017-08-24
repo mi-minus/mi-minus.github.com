@@ -249,6 +249,17 @@ $> revel run github.com/leanote/leanote
 
 # 注意!!!!!!!!!!!!!!
 按照本教程启动`Mongodb`是没有权限控制的, 如果你的Leanote服务器暴露在外网, 任何人都可以访问你的Mongodb并修改, 所以这是极其危险的!!!!!!!!!!! 请务必为Mongodb添加用户名和密码并以`auth`启动, 方法请见: [为mongodb数据库添加用户](https://github.com/leanote/leanote/wiki/QA#%E5%A6%82%E4%BD%95%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D)
+```
+关于mongo添加用户，这个用户必须在 use leanote 下进行创建才行(官方参考：https://github.com/leanote/leanote/wiki/QA#%E5%A6%82%E4%BD%95%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D)
+use leanote;
+db.addUser("root", "abc123");
+{
+	"_id" : ObjectId("53688d1950cc1813efb9564c"),
+	"user" : "root",
+	"readOnly" : false,
+	"pwd" : "e014bfea4a9c3c27ab34e50bd1ef0955"
+}
+```
 
 # `leanote` 安装/配置问题汇总
 
