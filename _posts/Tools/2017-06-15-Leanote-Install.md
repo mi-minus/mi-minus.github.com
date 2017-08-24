@@ -252,13 +252,11 @@ $> revel run github.com/leanote/leanote
 ```
 关于mongo添加用户，这个用户必须在 use leanote 下进行创建才行(官方参考：https://github.com/leanote/leanote/wiki/QA#%E5%A6%82%E4%BD%95%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D)
 use leanote;
-db.addUser("root", "abc123");
-{
-	"_id" : ObjectId("53688d1950cc1813efb9564c"),
-	"user" : "root",
-	"readOnly" : false,
-	"pwd" : "e014bfea4a9c3c27ab34e50bd1ef0955"
-}
+db.createUser({
+    user: 'root',
+    pwd: '123457',
+    roles: [{role: 'dbOwner', db: 'leanote'}]
+});
 ```
 
 # `leanote` 安装/配置问题汇总
