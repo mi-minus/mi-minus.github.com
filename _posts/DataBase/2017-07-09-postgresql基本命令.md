@@ -172,6 +172,7 @@ date: 2017-07-09
 	CREATE ROLE minus CREATEROLE CREATEDB SUPERUSER LOGIN ;　-　用户设置权限
 	grant all on database gpadmin to minus;              -　用户授权数据库
 	alter ROLE gpadmin with password 'minus';            - 用户设置密码
+	ALTER USER myuser WITH SUPERUSER;		     - 给用户user设置最高权限, 记住登陆用户一定是 Superuser才行
 	```
 	
 21. 创建/删除 schema : schema 是跟 数据库走，而不是用户走 
