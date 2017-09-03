@@ -16,6 +16,12 @@ date: 2017-02-17
 
 *******
 
+### 常用 Mongo-SQL :
+* [$addFields](https://docs.mongodb.com/manual/reference/operator/aggregation/addFields/): (在aggregate中使用)
+* [$filter/ $map / $reduce](https://docs.mongodb.com/manual/reference/operator/aggregation/filter/index.html): (通常用在$project中)
+* [$replaceRoot](https://docs.mongodb.com/manual/reference/operator/aggregation/replaceRoot/)(在aggregate中使用)
+* [$arrayElemAt](https://docs.mongodb.com/manual/reference/operator/aggregation/concatArrays/)
+
 ### Mongo Aggregate
 
 #### <font color="#1C86EE">new aggregate.project change</font>
