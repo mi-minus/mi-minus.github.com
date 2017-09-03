@@ -68,9 +68,11 @@ date: 2017-02-17
     
 
 * $graphLookup注意事项
+```
     1. The collection specified in from cannot be sharded.
     2. Setting the maxDepth field to 0 is equivalent to a non-recursive $lookup search stage.
     3. $graphLookup cannot use disk space as memory the way other aggregation operations can
+```
 
 * <font color="#7EC0EE">$sortByCount</font> : The operation returns the following documents, sorted in descending order by count
     ```sh
