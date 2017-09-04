@@ -33,9 +33,12 @@ date : 2017-09-05
 8. 病人：在不同科室不同医生有各自独立的完整资料
 ```
 ### 组成部分
-1. ![看病](/res/img/blog/CQ/air_hos/air_hos1.png)
-2. ![药品/保健品/康复器材-交流咨询](/res/img/blog/CQ/air_hos/air_hos2.png)
-3. ![教育宣传](/res/img/blog/CQ/air_hos/air_hos3.png)
+1. 看病
+![看病](/res/img/blog/CQ/air_hos/air_hos1.png)
+2. 药品/保健品/康复器材-交流咨询
+![药品/保健品/康复器材-交流咨询](/res/img/blog/CQ/air_hos/air_hos2.png)
+3. 教育宣传
+![教育宣传](/res/img/blog/CQ/air_hos/air_hos3.png)
 ### 特点和IDEAs
 ```
 1. 医联体 [难度系数:*****]
