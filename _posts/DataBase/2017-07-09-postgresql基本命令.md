@@ -485,3 +485,16 @@ date: 2017-07-09
 	```
 	sudo service postgresql restart
 	```
+	
+### pg的基本知识点
+#### Schema类
+```
+1. 每个用户被创建的时候都会有一个同名的 schema(每次登陆的默认schema就会是该同名schema), 这个schema的search_path可以临时或者长久被修改
+2. schema的优先级: pg_catalog[schema] > own_namespace[schema] > public[schema] > other[schemas]
+3. 系统级的schema是pg_catalog， 大家都可以访问的schema是public
+```
+#### 表/视图类
+```
+1. 视图随实体表名的更改而自动调整（表名虽改，其之上的视图仍然可以被访问，这个主要是视图绑定住了表的oid,表名改而oid不变）,但是与该表相关的函数会受影响，因为函数是实时编译，直接根据表名而进行的，所以受影响。
+2. 
+```
