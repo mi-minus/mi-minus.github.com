@@ -35,27 +35,26 @@ print(soup.prettify())
 ```link.get_text()```
 
 *直接内容去空：
-```soup.get_text("|", strip=True)```
-
-```soup.find_all("a",text="Elsie")```
-
-```css_soup.find_all("p",class_="body strikeout")```
-
-```soup.find_all(class_=re.compile("itl"))```
-
-```soup.find_all("a",attrs={"class":"sister"})```
-
+```
+soup.get_text("|", strip=True)
+soup.find_all("a",text="Elsie")
+css_soup.find_all("p",class_="body strikeout")
+soup.find_all(class_=re.compile("itl"))
+soup.find_all("a",attrs={"class":"sister"})
+```
 * 正则表达形式：
-```userSoupList = soup.findAll(name="h1", attrs={"class":re.compile(r"h1user(\s\w+)?")});```
-
-```soup.select("body a")```
-
-```soup.select("html head title")```
+```
+userSoupList = soup.findAll(name="h1", attrs={"class":re.compile(r"h1user(\s\w+)?")});
+soup.select("body a")
+soup.select("html head title")
+```
 
 * 找到某个tag标签下的直接子标签
-```soup.select("head > title")```
+```
+soup.select("head > title")
+```
 
-几个简单的浏览结构化数据的方法:
+* 几个简单的浏览结构化数据的方法:
 ```
 soup.title
 soup.title.name
@@ -75,13 +74,13 @@ soup.find(id="link3")
 
 #### 2、安装方式
 
-Beautiful Soup支持Python标准库中的HTML解析器,还支持一些第三方的解析器,其中一个是 lxml
+* Beautiful Soup支持Python标准库中的HTML解析器,还支持一些第三方的解析器,其中一个是 lxml
 ```
 $apt-get install Python-lxml
 $ pip install lxml
 ```
 
-另一个可供选择的解析器是纯Python实现的 html5lib , html5lib的解析方式与浏览器相同,可以选择下列方法来安装html5lib:
+* 另一个可供选择的解析器是纯Python实现的 html5lib , html5lib的解析方式与浏览器相同,可以选择下列方法来安装html5lib:
 ```
 $easy_install html5lib
 $pipinstallhtml5lib
@@ -145,6 +144,7 @@ title_tag=soup.titletitle_tag# <title>The Dormouse's story</title>title_tag.pare
 .next_elements 和 .previous_elements 的迭代器就可以向前或向后访问文档的解析内容,就好像文档正在被解析一样: 
 -----------------------------
 ```
+
 #### (2)Name: 
 * 搜索文档树：
 ```
