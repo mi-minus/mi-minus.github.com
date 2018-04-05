@@ -23,6 +23,7 @@ virtualenv可以搭建虚拟且独立的python环境，可以使每个项目环�
 ### pyenv install for ubuntu
 1. 安装博客：http://blog.csdn.net/databatman/article/details/53955828
             http://blog.codylab.com/python-pyenv-management/
+            https://github.com/pyenv/pyenv-installer [官网]
 2. 安装步骤：
     1. 安装curl / git
         ```
