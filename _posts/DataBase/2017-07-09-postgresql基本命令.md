@@ -45,6 +45,8 @@ date: 2017-07-09
 	```
 	CREATE USER postgres_user WITH PASSWORD 'password';
 	CREATE DATABASE my_postgres_db OWNER postgres_user;
+	GRANT ALL PRIVILEGES ON DATABASE databasename TO username;
+	alter user xxx with password 'password';
 	```
 
 1. 关闭指定数据库
