@@ -195,6 +195,7 @@ date: 2017-07-09
 	```
 	show search_path;                             -- show the current search_path
 	create schema my_schema ;grant all on schema xxx to user;  -- create another schema    
+	grant all privileges on all tables in schema public to xxx;
 	set search_path to my_schema;                 -- change search_path on a connection-level 临时改变
 	alter database xxx set search to my_schema;   -- change search_path on a database-level 　一直改变
 	```
