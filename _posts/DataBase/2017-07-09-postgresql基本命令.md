@@ -405,6 +405,12 @@ date: 2017-07-09
 	```
 	select relpages,reltuples from pg_class where relname = 'test2';
 	```
+	
+11. 数据库的导出/导入
+    ```apple js
+    > pg_dump -h hostname -U ris -W ris -n public -f xxx_backup.sql 
+    > psql -d ris -U ris -f xxx_backup.sql
+    ```
     
 ### 特殊语法
 1. 聚合组件：grouping set | cube | rollup
